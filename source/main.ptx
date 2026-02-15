@@ -29,6 +29,7 @@
     <xi:include href="./ch-GroupHomomorphisms.ptx" />
     <xi:include href="./ch-GroupIsomorphismTheorems.ptx" />
     <xi:include href="./ch-TheGroupSn.ptx" />
+    <xi:include href="./ch-Monoids.ptx" />
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />
