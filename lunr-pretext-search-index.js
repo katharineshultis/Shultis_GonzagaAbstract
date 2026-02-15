@@ -883,6 +883,42 @@ var ptx_lunr_docs = [
   "body": " What is a Monoid?  This is the next chapter to build!  "
 },
 {
+  "id": "ch-Semigroups",
+  "level": "1",
+  "url": "ch-Semigroups.html",
+  "type": "Chapter",
+  "number": "19",
+  "title": "What is a Semigroup?",
+  "body": " What is a Semigroup?  This is coming soon(ish)!  "
+},
+{
+  "id": "ch-Modules",
+  "level": "1",
+  "url": "ch-Modules.html",
+  "type": "Chapter",
+  "number": "20",
+  "title": "What is a Module?",
+  "body": " What is a Module?  This is coming soon(ish)!  "
+},
+{
+  "id": "ch-Submodules",
+  "level": "1",
+  "url": "ch-Submodules.html",
+  "type": "Chapter",
+  "number": "21",
+  "title": "Submodules",
+  "body": " Submodules  This is coming soon(ish)!  "
+},
+{
+  "id": "ch-ModuleIsomorphismTheorems",
+  "level": "1",
+  "url": "ch-ModuleIsomorphismTheorems.html",
+  "type": "Chapter",
+  "number": "22",
+  "title": "Module Homomorphisms and Quotients",
+  "body": " Module Homomorphisms and Quotients  This is coming soon(ish)!  "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
