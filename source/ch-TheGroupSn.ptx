@@ -133,13 +133,13 @@
   <statement>
     <p>
       A permutation <m>\sigma\in S_{n}</m> is called <term>even</term> if it can be decomposed as the product of an even number of transpositions and is called <alert>odd</alert> if it can be decomposed as the product of an odd number of transpositions.
-      <aside>
-        <p>Note that the fact that this is a normal subgroup (and not just a subset) is at least a proposition that we’re skipping out on at the moment.</p>
-      </aside>
       The set of all even permutations in <m>S_{n}</m> is a normal subgroup of <m>S_{n}</m> called the <term>Alternating Group on <m>n</m> elements</term> and denoted <m>A_{n}</m>.
     </p>
   </statement>
 </definition>
+      <aside>
+        <p>Note that the fact that this is a normal subgroup (and not just a subset) is at least a proposition that we’re skipping out on at the moment.</p>
+      </aside>
 
 <remark>
   <p>
@@ -212,7 +212,7 @@
     </statement>
   </exercise>
   <exercise number="17.B">
-      <statement> Here are some examples to play with.
+      <statement> <p>Here are some examples to play with.</p>
         <ol>
         <li>
           <p>
