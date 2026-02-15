@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-GroupHomomorphisms" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Group Homomorphisms</title><!--Chapter 15-->
+
+  <objectives>
+    <title>The learning outcomes for this chapter are to...</title>
+    <ul><li>...understand the definition of group homomorphisms and isomorphisms.</li>
+	    <li>...be able to give several (non)-examples of homomorphisms and isomorphisms.</li></ul>
+  </objectives>
+  
+  <p>
+     Just like ring homomorphisms were the "useful" maps between rings, group homomorphisms can be viewed as the "useful" maps between groups. 
+     Recall also that the "useful" ring maps were ones that preserved the operations. 
+     Here's the main definition of this chapter:
+  </p>
+
+  <definition xml:id="def-GroupHom">
+    <title>Group Homomorophisms</title>
+    <statement>
+      <p>
+        Let <m>G</m> and <m>H</m> be groups, with operations <m>\star_G</m> and <m>\star_H</m> respectively. 
+        A function <m>\varphi:G\to H</m> is called a <term>group homomorphism</term> (or simply homomorphism when it's clear we're discussing groups) if for every <m>g_1,g_2\in G</m>, <md><mrow>\varphi(g_1\star_G g_2)=\varphi(g_1)\star_H\varphi(g_2)</mrow></md>.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <title>A "Natural" Surjection</title>
+    <p>Let <m>G=\Z</m> and <m>H=\Z/2\Z</m>. 
+      The function <m>\varphi:\Z\to\Z/2\Z</m> given by <m>n\mapsto [n]</m> is a surjective group homomorphism. 
+      Indeed, <md><mrow>\varphi(n+m)=[n+m]=[n]+[m]=\varphi(n)+\varphi(m)</mrow></md>.
+    </p>
+  </example>
+
+  <example xml:id="eg-GroupNatSurj">
+    <title>Generalizing our "Natural" Surjection</title>
+    <p>
+      More generally, there is a surjective group homomorphism <m>G\to G/N</m> for any group <m>G</m> and normal subgroup <m>N</m> of <m>G</m> given by <m>\varphi(g)=gN</m>. (Possibly) you should prove this!?
+    </p>
+  </example>
+
+  <example xml:id="eg-GroupNatInj">
+    <title>A "Natural" Injection</title>
+    <p>
+      Also, for any group <m>G</m> and subgroup <m>H\subseteq G</m>, the "natural" inclusion map:
+      <md><mrow>\iota:H\to G\qquad\text{given by}\qquad h\mapsto h</mrow></md>
+      is an injective group homomorphism.
+    </p>
+  </example>
+
+  <example>
+    <title>A Non-Example</title>
+    <p>
+      The map <m>\varphi:S_3\to S_3</m> given by <m>\sigma\mapsto(12)\sigma</m> is not a group homomorphism. Why not?
+    </p>
+  </example>
+
+  <p>
+    Take a look back at Definition 8.7<!--Need a new reference soon!!!--> if you need reminders about the words injective, surjective, and/or bijective.
+  </p>
+
+  <definition xml:id="def-GroupIsom">
+    <title>Group Isomorphisms</title>
+    <statement>
+      <p>
+        Let <m>G</m> and <m>H</m> be groups. 
+        A function <m>\varphi:G\to H</m> is called a <term>group isomorphism</term> (or simply isomorphism when it is clear we're discussing groups) if <m>\varphi</m> is a bijective homomorphism. 
+        When such an isomorphism exists, we say that <m>G</m> and <m>H</m> are <term>isomorphic</term> and denote this by <m>G\cong H</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <title>An Isomorphism</title>
+    <p>Recall that the group <m>Q_8/Z</m> from <xref ref="eg-Q8modZ"/> looked an awful lot like <m>\Z/2\Z\times\Z/2\Z</m>.
+      In fact, these are isomorphic groups! 
+      We can demonstrate this by comparing Cayley tables and explicitly giving the bijection; 
+      however, showing the map is a homomorphism without demonstrating that the Cayley tables are just relabeled is harder to do. 
+      We'll come back to this in the next chapter once we have a few more tools to prove these are isomorphic in a nicer way.
+    </p>
+  </example>
+
+ <exercises xml:id="exercises-GroupHom">
+    <exercise number="15.A">
+      <statement><p>
+        	Complete the missing parts above. They're listed below to help you out!
+           <ol marker="(i)">
+            <li>Let <m>G</m> be a group and <m>H</m> a normal subgroup of <m>G</m>. 
+              From <xref ref="eg-GroupNatSurj"/>, show that the function <m>\varphi:G\to G/H</m> given by <m>g\mapsto gH</m> is a surjective homomorphism.
+              <fn>Note that this means you must both show it is a group homomorphism and a surjective function.</fn></li>
+		        <li>Let <m>H</m> be a subgroup of a group <m>G</m> and <m>\iota</m> the function from <xref ref="eg-GroupNatInj"/>. 
+              Show that this is indeed a group homomorphism.</li>
+            <li> Recall that every ring is a group under addition, so when we discuss the group <m>\Z</m>, we're using only the addition operation. 
+              Either prove the function <m>\varphi:\Z\to\Z</m> given by <m>n\mapsto 3n</m> is a group homomorphism, or demonstrate an explicit counterexample showing it is not a group homomorphism.</li>
+          </ol>
+      </p></statement>
+    </exercise>
+    <exercise number="15.B">
+      <statement><p> Here are some (non-)examples of group homomorphisms and isomorphisms. 
+      Show that each is a group homomorphism or is not a homomorphism. 
+      For those that are group homomorphisms, determine whether or not they're injective or surjective (or bijective). 
+      For those that are not group homomorphisms, provide an explicit counterexample to the definition of a group homomorphism. 
+      Since some of these are rings, so inherently come with two operations, does it matter which operation you choose? 
+      Phrased another way, is a ring also group under both operations?
+      <ol marker="(i)"><li>The function <m>\varphi:2\Z\to3\Z</m> given by <m>2n\mapsto 3n</m>.</li>
+        <li>The function <m>\varphi:2\Z\to\Z</m> given by <m>2n\mapsto n</m>.</li>
+        <li>The function <m>\Q\times\Q\to M_2(\Q)</m> given by <m>(a,b)\mapsto\left[\begin{array}{cc}a &amp; 0\\0 &amp; b\end{array}\right]</m>.</li>
+        <li>The function <m>\varphi:S_4\to \Z/4\Z</m> given by <m>\sigma\mapsto[\sigma(1)]</m>. 
+          As the notation here may be hard to follow, here's an example with <m>\sigma=(142)\in S_4</m>:
+          <md><mrow>\varphi(\sigma)=\varphi((142))=[\sigma(1)]=[4]=[0]</mrow></md>.</li>
+      </ol></p></statement>
+    </exercise>
+    <exercise number="15.C">
+      <statement>
+        <p>
+          Recall from Example 11.9<!--NEEDS A BETTER REFERENCE--> that the group <m>D_n</m> is the group of symmetries of a regular <m>n</m>-gon and has <m>2n</m> elements. 
+          Prove that <m>D_3\cong S_3</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise number="15.D">
+      <statement>
+        <p>
+          	Recall from Example 11.9<!--NEEDS A BETTER REFERENCE--> that the group <m>D_n</m> is the group of symmetries of a regular <m>n</m>-gon and has <m>2n</m> elements. 
+            Prove that there is an injective homomorphism <m>\varphi_n:D_n\to S_n</m> for all <m>n\in\N</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise number="15.E">
+      <statement>
+        <p>
+          	You may do any, all, or none of these problems. 
+            You will only be assigned them if you put them at the top of your list, or if you finish and need more to work on. 
+            They're all related to problem 8.D<!--NEEDS A BETTER REFERENCE!!!-->.
+            <ol marker="(i)">
+              <li>
+                <p>
+                  If <m>m\mid n</m>, show that there is a surjective group homomorphism <m>\Z/n\Z\to\Z/m\Z</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Explain why any group homomorphism <m>\Z/n\Z\to\Z/m\Z</m> with <m>n\lt m</m> is not surjective and any homomorphism <m>\Z/n\Z\to\Z/m\Z</m> with <m>n\gt m</m> is not injective.
+                </p>
+              </li>
+              <li>
+                <p>
+                  List all the group homomorphisms <m>\Z/2\Z\to\Z/3\Z</m>, <m>\Z/2\Z\to\Z/5\Z</m> and <m>\Z/2\Z\to\Z/7\Z</m>. 
+                  Like the examples in problem 8.D, some of these are likely large enough groups that it is a bad ida to try and list all the functions and identify the homomorphisms from that list. 
+                  What patterns do you notice here? 
+                  You need not prove the patterns hold true, just find at least one.
+                </p>
+              </li>
+              <li>
+                <p>
+                  List all the group homomorphisms <m>\Z/6\Z\to\Z/4\Z</m>, <m>\Z/6\Z\to\Z/5\Z</m> and <m>\Z/5\Z\to\Z/3\Z</m>. 
+                  Like some of the examples in problem 8.D, these are all large enough groups that it is a bad ida to try and list all the functions and identify the homomorphisms from that list. 
+                  What patterns do you notice here? 
+                  You need not prove the patterns hold true, just find at least one.
+                </p>
+              </li>
+            </ol>
+        </p>
+      </statement>
+    </exercise>
+  </exercises>
+
+
+</chapter>

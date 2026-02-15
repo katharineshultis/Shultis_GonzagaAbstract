@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-QuotientGroups" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Quotient Groups</title><!--Chapter 14-->
+
+    <objectives>
+    <title>The learning outcomes in this chapter are to:</title>
+      <ul><li>...understand the definition of a quotient group.</li>
+      <li>...be able to give several examples of quotient groups.</li>
+      <li>...be able to explain why quotient groups are groups.</li>
+      <li>...understand why normal subgroups are the necessary type of subgroup to <q>mod out</q> by.</li>
+      <li>...understand that quotient groups and quotient rings are analogous structures.</li></ul>
+    </objectives>
+
+    <p>Let’s start off with working on drawing parallels between quotient rings and quotient groups. 
+        In particular, it would be good to have a better understanding of the cosets of a normal subgroup of a group and their relationship with cosets of an ideal of a ring.</p>
+    <p>Recall (probably from Math 301) that equivalence relations define a partition on a set, and a partition of a set defines an equivalence relation. 
+        In ring land, we first defined an equivalence relation, and defined our cosets to be the equivalence classes that form the associated partition. 
+        Since we already have a definition of cosets for groups, perhaps we should think about things in reverse here by showing our cosets form a partition and <q>reverse engineering</q> the equivalence relation out of that.</p>
+
+    <proposition xml:id="prop-CosetsPartition">
+        <statement>
+            <p>
+                Let <m>G</m> be a group and <m>N</m> a subgroup of <m>G</m>. Then, the left cosets of <m>N</m> form a partition of <m>G</m>, i.e., <md><mrow>\displaystyle\bigcup_{g\in G}gN=G</mrow></md> and for <m>g,h\in G</m>, either <m>gN=hN</m> or <m>gN\cap hN=\emptyset</m>.
+            </p>
+        </statement>
+        <proof>
+            <p>
+                Let <m>G</m> be a group and <m>N</m> a subgroup of <m>G</m>. 
+                As <m>gN\subseteq G</m> for every <m>g\in G</m>, then the containment <m>\displaystyle\bigcup_{g\in G}gN\subseteq G</m> holds. 
+                To see that we have equality, let <m>x\in G</m> and note that since <m>e\in N</m>, we have <m>x=xe\in xN</m> so that <m>x\in \displaystyle\bigcup_{g\in G}gN</m> as well. 
+                What remains then is to let <m>g,h\in G</m>, assume that <m>gN\cap hN\neq\emptyset</m> and show that <m>gN=hN</m>. 
+                So let <m>x\in gN</m> and write <m>x=gn</m> for some <m>n\in N</m>. 
+                Also, since <m>gN\cap hN\neq\emptyset</m>, we know there is some <m>y\in gN\cap hN</m>. 
+                Write <m>y=ga=hb</m> for some <m>a,b\in N</m>. 
+                Multiplying on the right by <m>a^{-1}</m> yields <m>g=hba^{-1}</m>. Thus, <m>x=gn=hba^{-1}n</m>. 
+                Since <m>a,b\in N</m>, we know <m>ba^{-1}n\in N</m> and so <m>x=h(ba^{-1}n)\in hN</m>, which shows that <m>gN\subseteq hN</m>. 
+                A similar argument shows that <m>hN\subseteq gN</m> so that <m>gN=hN</m> as desired. 
+            </p>
+        </proof>
+    </proposition>
+    <p>
+        Now that we know the left cosets of a normal subgroup form a partition of the group, we know there is an associated equivalence relation. 
+        Let's work out the details of that.
+        Let <m>[x]</m> denote the set of a partition which contains the element <m>x</m>.
+        The equivalence relation defined from a partition is <md><mrow>x\sim y\Longleftrightarrow [x]=[y]</mrow></md>.
+        Using the notation we have for the cosets, this becomes 
+        <md>
+            <mrow>g\sim h \amp\Longleftrightarrow gN=hN</mrow>
+            <mrow>\amp\Longleftrightarrow g\in hN</mrow>
+            <mrow>\amp\Longleftrightarrow \text{ there exists an }n\in N\text{ such that }g=hn\</mrow>
+            <mrow>\amp\Longleftrightarrow \text{ there exists an }n\in N\text{ such that }h^{-1}g=n</mrow>
+            <mrow>\amp\Longleftrightarrow h^{-1}g\in N</mrow>
+        </md>
+        and so our equivalence relation boils down to being <md><mrow>g\sim h\Longleftrightarrow h^{-1}g\in N</mrow></md>
+        which, we might have guessed based on the equivalence relation for ideals.
+    </p>
+    <theorem xml:id="thm-QuotientGroupsareGroups">
+        <statement>
+            <p>
+                Let <m>G</m> be a group, <m>N</m> a normal subgroup of <m>G</m>, and define an operation <m>\ast</m> on the left cosets of <m>N</m> via <m>(gN)\ast(hN)=(gh)N</m>.
+                With this operation, the set of left cosets is a group, denoted <m>G/N</m> and pronounced <q>G mod N</q>.
+            </p>
+        </statement>
+        <proof>
+            <p>
+                I'm going to leave this whole proof to you. 
+                Make sure you show all of the necessary parts: the claimed operation is well-defined, the operation is associative, the operation has an identity element, and every element has an inverse.
+                Don't forget that the set on which this operation is defined is the set of left cosets: <m>G/N=\{gN\mid g\in G\}</m>.
+            </p>
+        </proof>
+    </theorem>
+    <definition xml:id="def-QuotientGroupDefn">
+        <statement>
+            <p>
+                Let <m>G</m> be a group and <m>N</m> a normal subgroup of <m>G</m>. 
+                Then the group <m>G/N</m> is called a <term>quotient group</term> of <m>G</m>.
+            </p>
+        </statement>
+    </definition>
+    <example xml:id="eg-Q8modZ">
+        <p> 
+            Consider the group <m>Q_8</m> and the normal subgroup <m>\{1,-1\}</m> of <m>Q_8</m>, which we'll denote <m>Z</m>. 
+            We should figure out if <m>Q_8/Z</m> is a group we've seen before by computing its elements and a Cayley table for the group.
+            We'll fill in this table during class and create the Cayley table. Afterwards, I'll update these notes with the answer(s). 
+            We'll know we've got all the cosets when every element of the group is in a coset. We will ensure we only have one representative of each coset by only listing each element once.
+        </p>
+        <p>
+            We found that the elements are: <m>Z=\{1,-1\}</m>, <m>iZ=\{i,-i\}</m>, <m>jZ=\{j,-j\}</m>, and <m>kZ=\{k,-k\}</m>.
+            The group table is:
+        </p>
+            <table><title>The group <m>Q_8/Z</m></title>
+            <tabular halign="center">
+                <row header="no" bottom="major" >
+                    <cell> <m>\star</m></cell>
+                    <cell> <m>Z</m></cell>
+                    <cell> <m>iZ</m></cell>
+                    <cell> <m>jZ</m></cell>
+                    <cell> <m>kZ</m></cell>
+                </row>
+                <row>
+                    <cell><m>Z</m></cell>
+                    <cell><m>Z</m></cell>
+                    <cell><m>iZ</m></cell>
+                    <cell><m>jZ</m></cell>
+                    <cell><m>kZ</m></cell>
+                </row>
+                <row>
+                    <cell><m>iZ</m></cell>
+                    <cell><m>iZ</m></cell>
+                    <cell><m>Z</m></cell>
+                    <cell><m>kZ</m></cell>
+                    <cell><m>jZ</m></cell>
+                </row>
+                <row>
+                    <cell><m>jZ</m></cell>
+                    <cell><m>jZ</m></cell>
+                    <cell><m>kZ</m></cell>
+                    <cell><m>Z</m></cell>
+                    <cell><m>iZ</m></cell>
+                </row>
+                <row>
+                    <cell><m>kZ</m></cell>
+                    <cell><m>kZ</m></cell>
+                    <cell><m>jZ</m></cell>
+                    <cell><m>iZ</m></cell>
+                    <cell><m>Z</m></cell>
+                </row>
+        </tabular>
+      </table>
+    </example>
+    <exercises xml:id="exercises-QuotientGroups">
+        <exercise number="14.A">
+            <statement>
+                <p>
+                    Complete the missing parts above. They're listed below to help you out!
+                    <ol marker="(i)">
+                        <li>Prove <xref ref="thm-QuotientGroupsareGroups"/>. It may help to look back on our proof of Theorem 7.4.
+                            <!--Update this to link to the theorem in the book once that chapter has been written!!!!!--></li>
+                        <li>What group does <m>Q_8/Z</m> look an awful lot like? How might we convince ourselves that these are the same group?</li>
+                    </ol>
+                </p>
+            </statement>
+        </exercise>
+        <exercise number="14.B">
+            <statement>
+                <p>
+                    Here are some basics of quotient groups. Each problem has its own directions.
+                    <ol marker="(i)">
+                        <li>(Bonus!) As with rings, if <m>H</m> is a subgroup of <m>G</m> and is not a normal subgroup, things can go terribly wrong.
+                            Identify a non-normal subgroup of <m>S_4</m> which I'll call <m>H</m>. 
+                            Then identify an element <m>\sigma\in S_4</m> such that <m>\sigma H\neq H\sigma</m>. 
+                            Conclude that the operation on the quotient of <m>S_4</m> by the non-normal subgroup you've identified is not well-defined by demonstrating an explicit example.
+                            For which elements <m>\sigma</m> of <m>S_4</m> is it the case that <m>\sigma H=H\sigma</m>?
+                        </li>
+                        <li> The <term>center</term> of a group <m>G</m> is the subgroup <m>Z(G)=\{g\in G\mid gh=hg\text{ for all }h\in G\}</m>.
+                            This notation comes from the word <q>zentrum</q> which is German for center.
+                            Prove that for any group <m>G</m>, we have <m>Z(G)</m> is a normal subgroup of <m>G</m>, so that <m>G/Z(G)</m> is always a group.
+                        </li>
+                        <li> Let <m>G</m> be a group and <m>H</m> a subgroup of <m>G</m>. 
+                            The <term>normalizer</term> of <m>H</m> in <m>G</m> is the set <md><mrow>N_G(H)=\{g\in G\mid gHg^{-1}=H\}</mrow></md>,
+                            i.e. the largest subgroup of <m>G</m> containing <m>H</m> in which <m>H</m> is normal.
+                            Compute <m>N_G(H)</m> for <md><mrow>H=\langle(12)\rangle=\{(1),(12)\}</mrow></md> and <m>G=S_4</m>.
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+        </exercise>
+        <exercise number="14.C">
+            <statement>
+                <p>
+                    Let <m>G</m> be a finite group and <m>N</m> a normal subgroup of <m>G</m>.
+                    Prove that <m>|G/N|=[G:N]</m>, that is, the order of <m>G/N</m> is the index of <m>N</m> in <m>G</m>.
+                </p>
+            </statement>
+        </exercise>
+        <exercise number="14.D">
+            <statement>
+                <p>
+                    Let <m>G</m> be an abelian group and <m>N</m> a subgroup of <m>G</m>.
+                    Prove that <m>G/N</m> is abelian.
+                    Also, give an example of a non-abelian group <m>G</m> and normal subgroup <m>N</m> such that <m>G/N</m> is abelian.
+                </p>
+            </statement>
+        </exercise>
+        <exercise number="14.E">
+            <statement>
+                <p>
+                    Prove that <m>Z(S_n)=\{(1)\}</m> for all <m>n\in\mathbb{N}</m> with <m>n\ge 3</m>.
+                </p>
+            </statement>
+        </exercise>
+    </exercises>
+</chapter>

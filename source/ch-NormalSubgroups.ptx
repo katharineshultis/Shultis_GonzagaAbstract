@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-NormalSubgroups" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Normal Subgroups</title><!--Chapter 13-->
+
+    <objectives>
+    <title>The learning outcomes in this chapter are to:</title>
+      <ul><li>...understand the definition of a normal subgroup.</li>
+      <li>...be able to give several examples of normal subgroups.</li>
+      <li>...understand some important properties of normal subgroups.</li></ul>
+    </objectives>
+    
+    <p>Recall that with rings, the definition of an ideal was ideally suited to define quotient rings and have the resulting operations be well-defined. The notion of a normal subgroup is analogous in the sense that we want something ideally suited to define a quotient group and have the operation be well-defined.</p>
+    <p>Let's think backwards a bit, and work with a group written additively. If <m>G</m> is a group, and <m>N</m> is a "normal" subgroup of <m>G</m>, we might want to define the "cosets" of <m>N</m>, i.e. the elements of the quotient group <m>G/N</m>, to be of the form <m>[g]=g+N=\{g+n\mid n\in N\}</m> with <m>g\in G</m>. Suppose further that we want the operation on these to be given by <m>[g]+[h]=[g+h]</m> for <m>[g],[h]\in G/N</m>. For this to be well-defined, we'd need that for <m>[g]=[g']</m> and <m>[h]=[h']</m>, then <m>[g+h]=[g'+h']</m>, i.e., we'd need that <m>-(g'+h')+(g+h)\in N</m> whenever <m>-g'+g\in N</m> and <m>-h'+h\in N</m>. Because we might be more prone to assuming commutativity in additive notation, and we should be careful about not assuming things we're not given, let's switch now to multiplicative notation!</p>
+    
+    <p>If <m>G</m> is a group written multiplicatively, with identity element <m>e</m>, and <m>N</m> is a "normal" subgroup of <m>G</m>, we have "cosets" of <m>N</m> being of the form <m>\overline{g}=[g]=gN=\{gn\mid n\in N\}</m>. For the operation <m>(gN)(hN)=(gh)N</m> to be well-defined, we will need to take <m>a,a',b,b'\in G</m> such that <m>a'N=aN</m> and <m>b'N=bN</m> and need to show that <m>(a'b')N=(ab)N</m>, i.e. that <m>(ab)^{-1}(a'b')\in N</m>. Being a bit more specific, note that <m>nN=eN</m> for any <m>n\in N</m>, and fix some <m>g\in G</m> and <m>n\in N</m>. For the operation to be well-defined in this specific instance, we'll need that <m>(nN)(gN)=(eN)(gN)</m>, i.e. we need that <m>(eg)^{-1}(ng)\in N</m>. Recall from Exercise 11.C.i that <m>(ab)^{-1}=b^{-1}a^{-1}</m> for any <m>a,b\in G</m>. Also, note that the identity element is always its own inverse. Now, note that for the operation to be well-defined, we need that <m>(eg)^{-1}(ng)=(g^{-1}e^{-1})(ng)=g^{-1}eng=g^{-1}ng</m> is an element of <m>N</m>. We're ready for the definition of a normal subgroup now, as we'll create that definition to make this work.</p>
+    <!--Come back and fix the reference here to 11.C.i to be tagged to chapter 11 once it exists!!!-->
+
+    <definition>
+      <title>Normal Subgroup</title>
+      <statement><p>Let <m>(G,\star)</m> be a group and <m>N</m> a subset of <m>G</m>. We say that <m>N</m> is a <term>normal subgroup of <m>G</m></term>, and denote this as <m>N\lhd G</m>, if <m>N</m> is a subgroup of <m>G</m> and for every <m>g\in G</m> and <m>n\in N</m>, we have that <m>g^{-1}\star n\star g\in N</m> as well.</p></statement>
+    </definition>
+
+    <note><p>The <m>\LaTeX{}</m> code to obtain the symbol <m>\lhd</m> is <c>\lhd</c>.</p></note>
+
+    <example>
+      <title>Subgroups of "our" Favorite Abelian Group</title>
+      	<p>Our favorite abelian group might be <m>{\mathbb{Z}}</m>, and our favorite subgroup of this is probably <m>n{\mathbb{Z}}</m> where <m>n</m> is our favorite nonzero integer. As <m>{\mathbb{Z}}</m> uses additive notation, for <m>n\in{\mathbb{Z}}</m> to be a normal subgroup of <m>{\mathbb{Z}}</m>, we'd need that <m>-g+nh+g\in n{\mathbb{Z}}</m> whenever <m>nh\in n{\mathbb{Z}}</m> and <m>g\in{\mathbb{Z}}</m>. This is "easily" seen to work, as the commutativity of the operation allows for us to rewrite this as <m>(-g+g)+nh=nh\in n{\mathbb{Z}}</m>.</p>
+    </example>
+    
+    <theorem xml:id="theorem-normal-abelian-subgroups">
+      <title>Normals in Abelian Groups</title>
+      <statement>
+      <p>The example above seems to imply that every subgroup of an abelian group is normal. We should probably prove that!</p></statement>
+    </theorem>
+
+    <p>Since every subgroup of an abelian group is normal, we should really look at a non-abelian example too:</p>
+
+    <example xml:id="normal-subgroup-of-S3">
+      <title>Normal Subgroup of <m>S_3</m></title>
+      <p>Our smallest non-abelian group is <m>S_3</m>. Consider the set <m>A_3=\{(1),(1\;2\;3),(1\;3\;2)\}\subset S_3</m>. We can see, although you should ask yourself how, from this smaller part of the group table for <m>S_3</m> that <m>A_3</m> is a subgroup of <m>S_3</m>:</p>
+      <table><title>A Normal Subgroup of <m>S_3</m></title>
+        <tabular halign="center">
+        <row header="no" bottom="major" >
+          <cell> <m>\star</m></cell>
+          <cell> <m>(1)</m></cell>
+          <cell> <m>(1\;2\;3)</m></cell>
+          <cell> <m>(1\;3\;2)</m></cell>
+        </row>
+        <row>
+          <cell><m>(1)</m></cell>
+          <cell><m>(1)</m></cell>
+          <cell><m>(1\;2\;3)</m></cell>
+          <cell><m>(1\;3\;2)</m></cell>
+        </row>
+        <row>
+          <cell><m>(1\;2\;3)</m></cell>
+          <cell><m>(1\;2\;3)</m></cell>
+          <cell><m>(1\;3\;2)</m></cell>
+          <cell><m>(1)</m></cell>
+        </row>
+        <row>
+          <cell><m>(1\;3\;2)</m></cell>
+          <cell><m>(1\;3\;2)</m></cell>
+          <cell><m>(1)</m></cell>
+          <cell><m>(1\;2\;3)</m></cell>
+        </row>
+        </tabular>
+      </table>
+      <p>To check that it is normal, we need that <m>g^{-1}ng\in A_3</m> for every <m>n\in A_3</m> and every <m>g\in S_3</m>. Note that it is clear that <m>g^{-1}ng\in A_3</m> if <m>g,n\in A_3</m>, so we really only need to test this for <m>g\in S_3\setminus A_3</m>. You should do these computations to get more comfortable with cycle notation for elements of a permutation group.</p>
+    </example>
+    <p>Let <m>G</m> be a group written multiplicatively and <m>H</m> a subgroup of <m>G</m>. Recall that the <term>left cosets</term> of <m>H</m> in <m>G</m> are the sets of the form <m>gH=\{gh\mid h\in H\}</m>. We can similarly define the <term>right cosets</term> of <m>H</m> in <m>G</m> to be the sets of the form <m>Hg=\{hg\mid h\in H\}</m>.</p>
+    <theorem xml:id="theorem-normal-subgroup-equivalences">
+      <title>Normal Subgroup Equivalent Statements</title>
+      <p>Let <m>G</m> be a group and <m>H</m> a subgroup of <m>G</m>. The following are equivalent:
+      <ol><li label="(a)">The subgroup <m>H</m> is a normal subgroup of <m>G</m>.</li>
+      <li>For every <m>g\in G</m>, we have <m>gH=Hg</m>. Note that this is a claim about set equality.</li>
+      <li>For every <m>g\in G</m>, we have <m>g^{-1}Hg=H</m> where <m>g^{-1}Hg</m> denotes the set of all elements of the form <m>g^{-1}hg</m> with <m>h\in H</m>. Note that the claim <m>g^{-1}Hg=H</m> is also a claim about set equality.</li></ol></p>
+    </theorem>
+
+    <p>The equivalence of the first two items above is typically phrased to say that <em>"A subgroup <m>H</m> is normal if and only if its left and right cosets are the same."</em></p>
+    
+    <p>Recall that when <m>G</m> is a finite group, <m>|G|</m> is the <term>order</term> of the group <m>G</m> and defined to be the number of elements of <m>G</m>. Also, recall from Exercise 12.C that if <m>G</m> is a finite group and <m>H</m> is a subgroup of <m>G</m>, then the order of <m>H</m> divides the order of <m>G</m>. </p>
+
+    <definition>
+      <title>Index of a Subgroup</title>
+      <statement><p>Let <m>H</m> be a subgroup of a finite group <m>G</m>. We call the quotient <m>\dfrac{|G|}{|H|}</m> the <term>index of <m>H</m> in <m>G</m></term> and denote it by <m>[G:H]</m>.</p></statement>
+    </definition>
+
+    <theorem>
+      <title>Index 2 Subgroups</title>
+      <statement><p>Let <m>G</m> be a finite group. If <m>H</m> is a subgroup of <m>G</m> of index <m>2</m>, then <m>H</m> is a normal subgroup of <m>G</m>.
+      </p></statement>
+      <proof>	<p>I'd like for "us" to prove this. However, maybe we'll delay on a complete proof for now. Here's a sketch to get you started. Of course, we need to assume that <m>H</m> is a subgroup of <m>G</m> and that <m>H</m> has index <m>2</m>. Our goal/task is to show that <m>H</m> is normal, which, by <xref ref="theorem-normal-abelian-subgroups"/>, we can do by proving <m>gH=Hg</m> for every <m>g\in G</m>. So let <m>g\in G</m>. There are two possibilities:
+      <ul><li>If <m>g\in H</m>, then <m>gH=H=Hg</m> as <m>H</m> is a subgroup of <m>G</m>.</li>
+      <li>if <m>g\notin H</m>, then <m>gH\cap H=\emptyset</m> and <m>Hg\cap H=\emptyset</m>. As <m>H</m> has index <m>2</m> in <m>G</m>, then <m>H</m> is half of the elements of <m>G</m> and the other half must be both <m>Hg</m> and <m>gH</m> so that <m>gH=Hg</m> as desired.</li></ul></p>
+      </proof>
+    </theorem>
+    <exercises>
+      <exercise number="13.A">
+        <statement><p>Complete the missing parts above. They're listed below to help you out! 
+          <ol marker="(i)">
+          <li>Let <m>G</m> be an abelian group and <m>H</m> any subgroup of <m>G</m>. Prove that <m>H</m> is a normal subgroup of <m>G</m>.</li>
+          <li>Do the <m>3\cdot 2=6</m> computations necessary to show that <m>A_3\lhd S_3</m>. Note that there are 3 choices for <m>g\in S_3\setminus A_3</m> and only two interesting choices for <m>h\in A_3</m>. For your own benefit of learning, it would be best if you did this without the Cayley table for the group and only used cycle notation for the computations!</li>
+          <li>Prove <xref ref="theorem-normal-subgroup-equivalences"/>. Note that to do this, it suffices to show one of the following chains of implications: <m>(a)\Longrightarrow(b)\Longrightarrow(c)\Longrightarrow(a)</m> or <m>(a)\Longrightarrow(c)\Longrightarrow(b)\Longrightarrow(a)</m>. It's unclear to me which of these you'll find easier.</li></ol>
+          </p></statement>
+      </exercise>
+      <exercise number="13.B">
+        <statement><p>Here are some basics of normal subgroups. Each exercise has its own instructions.
+          <ol marker="(i)">
+            <li>On the Final Exam in Spring 2025, you identified all six subgroups of <m>Q_8</m>. They were: <m>\{1\}, \{1,-1\}, \{1,i,-1,-i\}, \{1,j,-1,-j\}, \{1,k,-1,-k\}</m>, and <m>Q_8</m>. Which of these are normal and which are not normal? If you took the course in Fall 2025, you might want to first check that this is indeed an exhaustive list of subgroups of <m>Q_8</m>. </li>
+            <li>In Exercise 12.B.ii you identified some subgroups of <m>S_4</m>. You'll need to scroll on the last one to see the whole thing unless your browser window is sufficiently wide: 
+              <m>\langle (12)(34)\rangle = \{(1),(12)(34)\}</m>
+		          <m>\langle(12),(34)\rangle = \{(1),(12),(34),(12)(34)\}</m>
+		          <m>\langle(123),(12)(34)\rangle = \{(1), (123), (132), (124), (142), (134), (143), (234), (243), (12)(34), (13)(24), (14)(23)\}</m>
+              Which of these are normal and which are not?</li></ol>
+              <!--Another example of a reference that should maybe be tagged to the original once I figure out how to do that with exercises-->
+            </p></statement>
+      </exercise>
+      <exercise number="13.C">
+	      <statement><p>As with the ideals chapter, we'll skip this as it was split from the subgroups chapter to ensure a shorter lecture.</p></statement>
+      </exercise>
+    </exercises>
+</chapter>

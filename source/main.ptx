@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- we first include a file which contains the docinfo element: -->
+  <xi:include href="./docinfo.ptx" />
+
+  <book xml:id="book">
+    <title>Abstract Algebra</title>
+    <subtitle>Course textbook for Math 437 and Math 438 at Gonzaga University with Dr. Shultis</subtitle>
+
+    <!-- Include frontmatter -->
+    <xi:include href="./frontmatter.ptx" />
+
+    <!-- Include chapters -->
+    <xi:include href="./ch-Operations.ptx"/>
+    <xi:include href="./ch-WhatIsAField.ptx" />
+    <xi:include href="./ch-WhatIsARing.ptx" />
+    <xi:include href="./ch-SpecialRingElements.ptx" />
+    <xi:include href="./ch-Subrings.ptx" />
+    <xi:include href="./ch-Ideals.ptx" />
+    <xi:include href="./ch-QuotientRings.ptx" />
+    <xi:include href="./ch-RingHomomorphisms.ptx" />
+    <xi:include href="./ch-RingIsomorphismTheorems.ptx" />
+    <xi:include href="./ch-TheIntegers.ptx" />
+    <xi:include href="./ch-WhatIsAGroup.ptx" />
+    <xi:include href="./ch-Subgroups.ptx" />
+    <xi:include href="./ch-NormalSubgroups.ptx" />
+    <xi:include href="./ch-QuotientGroups.ptx" />
+    <xi:include href="./ch-GroupHomomorphisms.ptx" />
+    <xi:include href="./ch-GroupIsomorphismTheorems.ptx" />
+    <xi:include href="./ch-TheGroupSn.ptx" />
+
+    <!-- Include backmatter -->
+    <xi:include href="./backmatter.ptx" />
+
+  </book>
+</pretext>

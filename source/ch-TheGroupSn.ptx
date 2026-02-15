@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-TheGroupSn" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The group <m>S_n</m></title><!--Chapter 17-->
+
+<objectives>
+    <title>The learning outcomes in this chapter are to:</title>
+<ul><li><p>...understand the group <m>S_{n}</m> better.</p></li>
+  <li><p>...describe cycle decomposition in <m>S_{n}</m>.</p></li>
+  <li><p>...describe the group <m>A_{n}</m>.</p></li></ul>
+</objectives>
+
+<p>
+  Let <m>\Omega</m> be a set and let <m>S_{\Omega}</m> denote the set of all bijections <m>\Omega\to\Omega</m>.
+  When <m>\Omega</m> is a finite set of order <m>n</m>, we denote this group simply as <m>S_{n}</m> and typically denote the elements of <m>\Omega</m> as <m>1,2,\ldots,n</m>.
+  The focus of this chapter is on the group <m>S_{n}</m>.
+</p>
+
+<p>
+  Recall how we construct cycle notation for an element, <m>\sigma</m>, of <m>S_{n}</m>.
+  Suppose
+  <me>
+    \sigma=(a_{11}a_{12}\cdots a_{1n_1})(a_{21}\cdots a_{2n_2})\cdots(a_{m1}\cdots a_{mn_m}).
+  </me>
+  The cycle <m>(a_{11}a_{12}\cdots a_{1n_1})</m> indicates that <m>\sigma(a_{11})=a_{12}</m>, <m>\sigma(a_{12})=a_{13}</m>, and continues in this fashion until we reach <m>\sigma(a_{1n_1})=a_{11}</m>.
+  We then repeat this process for each of the cycles in the permutation <m>\sigma</m>.
+  Also, recall that we typically write the smallest element in a cycle first, so it is fair to expect to want that <m>a_{11}&#x3C;a_{1i}</m> for <m>2\leq i\leq n_{1}</m>, and similarly for the other cycles in <m>\sigma</m>.
+</p>
+
+<p>
+  As each <m>\sigma\in S_{n}</m> denotes a function, we should read the notation right to left.
+  Indeed, for <m>\sigma,\tau\in S_{n}</m> the element <m>\sigma\tau\in S_{n}</m> is shorthand for the function <m>\sigma\circ\tau:\{1,\ldots,n\}\to\{1,\ldots,n\}</m> and we know that <m>(\sigma\circ\tau)(x)=\sigma(\tau(x))</m> for each <m>x\in\{1,\ldots,n\}</m> by definition of function composition.
+</p>
+
+<p>
+  Our first result in this chapter tells us how to deal with the product of elements in <m>S_{n}</m> whose cycles do not overlap.
+</p>
+
+<theorem>
+  <statement>
+    <p>
+      Let <m>\sigma,\tau\in S_{n}</m> be cycles whose elements do not overlap.
+      That is, let <m>\sigma=(a_{1}a_{2}\cdots a_{\ell})</m> and <m>\tau=(b_{1}b_{2}\cdots b_{k})</m> with <m>a_{j}\neq b_{i}</m> for all <m>1\leq i\leq k</m> and <m>1\leq j\leq \ell</m>.
+      Then <m>\sigma\tau=\tau\sigma</m>, i.e.
+      <m>\sigma</m> and <m>\tau</m> commute.
+    </p>
+  </statement>
+<proof>
+  <p>
+    Let <m>x\in\{1,\ldots,n\}</m>.
+    If <m>x=a_{j}</m> for some <m>j</m>, then for all <m>i</m>, we have <m>x\neq b_{i}</m>.
+    We first show that <m>\sigma(x)\neq b_{i}</m> for any <m>i</m> with <m>1\leq i\leq k</m>.
+    If this were not the case and we had <m>\sigma(x)=b_{i}</m> for some <m>i</m> with <m>1&#x3C; i\leq k</m>, then <m>x=b_{i-1}</m>, which is a contradiction.
+    If we have <m>\sigma(x)=b_{1}</m>, then <m>x=b_{k}</m>, which is again a contradiction; hence, we know that whenever <m>x=a_{j}</m> for some <m>j</m>, then <m>\sigma(x)\neq b_{i}</m> for any <m>i</m>.
+    Next, note that <m>(\sigma\tau)(x)=\sigma(\tau(x))=\sigma(x)</m> and <m>(\tau\sigma)(x)=\tau(\sigma(x))=\sigma(x)</m> since <m>\sigma(x)\neq b_{i}</m> for any <m>i</m>.
+  </p>
+  <p>
+    A similar argument shows that if <m>x=b_{i}</m> for some <m>i</m>, then <m>(\sigma\tau)(x)=(\tau\sigma)(x)</m>.
+    Also, if <m>x\neq a_{j}</m> and <m>x\neq b_{i}</m> for any <m>i,j</m>, then <m>\sigma(x)=\tau(x)=x</m> and so <m>(\sigma\tau)(x)=(\tau\sigma)(x)</m> in that case as well.
+  </p>
+  <p>
+    As the functions <m>\sigma\tau</m> and <m>\tau\sigma</m> yield the same result for all elements <m>x\in\{1,\ldots,n\}</m>, then we have that <m>\sigma\tau=\tau\sigma</m>.
+  </p>
+</proof>
+</theorem>
+
+<example>
+  <statement>
+    <p>
+      Consider the group <m>S_{4}</m> and the elements <m>(12)</m> and <m>(34)</m>.
+      Then <m>(12)(34)=(34)(12)</m> and so when we’re looking to find the normalizer of <m>H=\{(1),(12)\}</m> in <m>S_{4}</m>, we “easily” (and without checking either map fully) see that <m>(34)^{-1}(12)(34)=(34)^{-1}(34)(12)=(12)</m>, meaning that <m>(34)\in N_{S_4}(H)</m>.
+    </p>
+  </statement>
+</example>
+
+<p>
+  Our next result we won’t prove explicitly; however, it will give us confidence in our computations of inverses and seems fairly intuitive.
+  Let me know if you want more details on this.
+</p>
+
+
+<proposition xml:id="prop-cycleinv">
+  <statement>
+    <p>
+       Let <m>\sigma=(a_{1}a_{2}\cdots a_{m})\in S_{n}</m>.
+      Then <m>\sigma^{-1}=(a_{m}a_{m-1}\cdots a_{2}a_{1})=(a_{1}a_{m}a_{m-1}\cdots a_{3}a_{2})</m>.
+    </p>
+  </statement>
+</proposition>
+
+<definition>
+  <statement>
+    <p>
+      We say that <m>\sigma\in S_{n}</m> is a <term>transposition</term> if <m>\sigma=(a_{1}a_{2})</m> for some <m>a_{1},a_{2}\in\{1,\ldots,n\}</m>.
+    </p>
+  </statement>
+</definition>
+
+
+<proposition xml:id="prop-transselfinvert">
+  <statement>
+    <p>
+      Let <m>\sigma</m> be a transposition.
+      Then <m>\sigma</m> is its own inverse.
+    </p>
+  </statement>
+</proposition>
+
+<p>
+  The previous proposition should be straight-forward to show.
+  Our next Theorem is important for defining the subgroup <m>A_{n}</m> of <m>S_{n}</m>.
+</p>
+
+<theorem xml:id="thm-evenoddperms">
+  <statement>
+    <p>
+       Let <m>\sigma\in S_{n}</m>.
+      Then <m>\sigma</m> can be written as a product of transpositions.
+    </p>
+  </statement>
+
+<proof>
+  <p>
+    As every permutation in <m>S_{n}</m> can be written as the product of several cycles, it suffices to do this for a single cycle.
+    So, consider the cycle <m>\sigma=(a_{1}a_{2}\cdots a_{k})</m>.
+    Then we have <m>\sigma=(a_{1}a_{k})(a_{1}a_{k-1})\cdots(a_{1}a_{3})(a_{1}a_{2})</m> which shows that every element of <m>S_{n}</m> can be written as a product of transpositions.
+    You should convince yourself that this works!
+  </p>
+</proof>
+</theorem>
+
+<definition xml:id="def-permparity">
+  <statement>
+    <p>
+      A permutation <m>\sigma\in S_{n}</m> is called <term>even</term> if it can be decomposed as the product of an even number of transpositions and is called <alert>odd</alert> if it can be decomposed as the product of an odd number of transpositions.
+      <aside>
+        <p>Note that the fact that this is a normal subgroup (and not just a subset) is at least a proposition that we’re skipping out on at the moment.</p>
+      </aside>
+      The set of all even permutations in <m>S_{n}</m> is a normal subgroup of <m>S_{n}</m> called the <term>Alternating Group on <m>n</m> elements</term> and denoted <m>A_{n}</m>.
+    </p>
+  </statement>
+</definition>
+
+<remark>
+  <p>
+    You should be suspicious of the above definition.
+    We’ve spent quite a bit of time on making sure that functions are well-defined when the domain is a quotient (i.e.
+    in ensuring that different representations of the same element produce the same result).
+    However, the definition is cavalierly assuming that the function <m>\epsilon:S_{n}\to\Z/2\Z</m> given by
+    <me>
+      \epsilon(\sigma)=\begin{cases}\overline{0}, &#x26; \text{ if }\sigma\text{ CAN be written as the product of an even number of permutations, and }\\ \overline{1}, &#x26; \text{ if }\sigma\text{ CAN be written as the product of an odd number of permutations}\end{cases}
+    </me>
+    is at least a well-defined function! For better or for worse, I’m going to skip out on even attempting to prove this fact as I find most proofs of it to be notationally messy and unenlightening.
+  </p>
+</remark>
+
+<p>
+  The next result we’ll explore with examples and also won’t prove in full generality.
+</p>
+
+<theorem xml:id="thm-oddcycles">
+  <statement>
+    <p>
+       A permutation <m>\sigma\in S_{n}</m> is <term>odd</term> if and only if the number of cycles of even length in a cycle decomposition of <m>\sigma</m> is odd.
+    </p>
+  </statement>
+</theorem>
+
+<example>
+  <statement>
+    <p>
+      In <m>S_{18}</m>, we have that <m>\sigma=(1~2~3~4~5~6)(7~8~9)(10~11)(12~13~14~15)(16~17~18)</m> has three cycles of even length, so is an odd permutation.
+      However, <m>\tau=(1~2~3~4~5~6)(7~8~9)(10~11)</m> has two cycles of even length and so is an even permutation.
+      It is probably worth pointing out at this point that the cycle <m>(a_{1}~a_{2}~\cdots~a_{k})</m> decomposes into transpositions as <m>(a_{1}~a_{k})\cdots(a_{1}~a_{3})(a_{1}~a_{2})</m> which is a decomposition into <m>k-1</m> transpositions.
+      Hence odd length cycles are even permutations and even length cycles are odd permutations. If these last two sentences were confusing, then please forget I ever said them!
+    </p>
+  </statement>
+</example>
+
+<corollary xml:id="cor-cycleprods">
+  <statement>
+    <p>
+       An immediate consequence of <xref ref="thm-oddcycles" /> is that <m>\sigma\tau</m> is even whenever both <m>\sigma</m> and <m>\tau</m> are even or both are odd and <m>\sigma\tau</m> is odd whenever one of <m>\sigma</m> and <m>\tau</m> is even and the other is odd. 
+       It’s perhaps worth pointing out here that the numbers of transpositions in permutations decompositions <alert>ADD</alert> together when multiplying the permutations together.
+    </p>
+  </statement>
+</corollary>
+
+</chapter>

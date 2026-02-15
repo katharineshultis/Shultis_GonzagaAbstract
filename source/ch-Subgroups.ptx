@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-Subgroups" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Subgroups</title><!--Chapter 12-->
+
+  <objectives>
+     <title>The learning outcomes in this chapter are to:</title>
+      <ul><li>...understand the definition of a subgroup.</li>
+      <li>...be able to give several examples of subgroups.</li>
+      <li>...use the Subgroup test to shorten the argument showing that a subset is a subgroup.</li></ul>
+  </objectives>
+
+    <p>As is typical in algebra, one definition of a subgroup is that it is a SUB-GROUP. That is, it is a subset of a group that is itself a group. Here's a more formal definition.
+    </p>
+    <definition> 
+      <title>Subgroup</title>
+      <statement><p>Let <m>(G,\star)</m> be a group. A set <m>H</m> is a <term>subgroup</term> of <m>G</m> if:<ol>
+        <li>The set <m>H</m> is a (nonempty) subset of <m>G</m>.</li>
+        <li>If <m>h,k\in H</m>, then so is <m>h\star k</m>.</li>
+        <li>The set <m>H</m> together with the operation <m>\star</m> is a group. That is, it satisfies the axioms of a group: the operation is associative; the operation has an identity element, denoted <m>e</m>; and, every element has an inverse with respect to <m>\star</m>.</li>
+      </ol></p></statement>
+    </definition>
+    <note> 
+      <p>As with subrings, the word nonempty is in parentheses because the emptyset is not a group, and so cannot be a subgroup of any group. The issue is that a group <em>must contain</em> at least one element: the identity element.</p>
+    </note>
+    <note>
+      <p>Some (possibly most or all) texts use <m>H\leq G</m> to denote that <m>H</m> is a subgroup of <m>G</m>. The notation <m>H\lneq G</m> then means that <m>H</m> is a <em>proper subgroup</em> of <m>G</m>, meaning that <m>H\neq G</m> and <m>H</m> is a subgroup of <m>G</m>.</p>
+    </note>
+    <example>
+      <title>Simplest, always in existence, subgroups</title>
+      <p>Let <m>G</m> be a group with identity element <m>e</m>. Then <m>\{e\}</m> and <m>G</m> are subgroups of <m>G</m>. Is this clear?</p>
+    </example>
+    <note>
+      <p>	Note that as with subrings, another way to rephrase the second item in the definition of a subgroup is that we say the set <m>H</m> is closed under the operation <m>\star</m>.
+      </p>
+    </note>
+    <theorem xml:id="theorem-subgroup">
+      <title>Subgroup Test</title>
+      <statement>
+        <p>
+          Let <m>(G,\star)</m> be a group and <m>H</m> a nonempty subset of <m>G</m>. For any <m>g\in G</m>, we let <m>g^{-1}</m> denote the inverse of <m>g</m> in <m>G</m>. The set <m>H</m> is a subgroup of <m>G</m> if and only if <m>g\star h^{-1}\in H</m> for all <m>g,h\in H</m>.
+        </p>
+      </statement>
+      <proof>
+       <p>
+         <m>(\Longrightarrow)</m> First, we assume <m>H</m> is a subgroup of <m>G</m> and we must show that <m>g\ast h^{-1}\in H</m> for all <m>g,h\in H</m>. So let <m>g,h\in H</m>. As <m>H</m> is a subgroup of <m>G</m>, it is a group, and so the inverse of <m>h</m> is an element of <m>H</m>, i.e. <m>h^{-1}\in H</m>. As <m>H</m> is a subgroup of <m>G</m>, it is closed under multiplication and so we have <m>g\ast h^{-1}\in H</m> as desired.
+        </p>
+       <p>
+         <m>(\Longleftarrow)</m> Next, we assume <m>g\ast h^{-1}\in H</m> for all <m>g,h\in H</m> and we must show that <m>H</m> is a subgroup of <m>G</m>. To do this, we must show all of the axioms of a subgroup hold. In the hypotheses of the theorem, we were told that <m>H</m> is a nonempty subset of <m>G</m>, so that requirement is satisfied. For the second requirement, let <m>h,k\in H</m>. then by assumption we have <m>k\ast k^{-1}\in H</m>. As <m>k\ast k^{-1}=e</m>, we know <m>e\in H</m>. Now, we can see that our hypothesis gives <m>k^{-1}=e\ast k^{-1}\in H</m> and using the hypothesis one more time gives <m>h\ast k=h\ast(k^{-1})^{-1}\in H</m> as desired. For the final subgroup requirement, we must show that <m>H</m> satisfies the axioms of a group. This means showing that the operation on <m>H</m> is associative, has an identity in <m>H</m>, and every element has an inverse in <m>H</m>. These tasks are left for the exercises. For the identity part, looking carefully at the middle of this proof may give you what you need.
+        </p>
+     </proof>
+    </theorem>
+    <remark>
+      <p>Often, the notation for the operation in a group is considered to be "multiplication" and the operation is written just as concatenation. With that standard, another way to phrase <xref ref="theorem-subgroup"/> is to say that <m>H</m> is a subgroup of <m>G</m> if and only if for every <m>g,h\in H</m>, we have <m>gh^{-1}\in H</m>.
+      </p>
+    </remark>
+    <example xml:id="example-rings-as-subgroups">
+      <p>Recall that every ring is an abelian group under addition. Which of <m>{\mathbb{Z}}, {\mathbb{Q}}, {\mathbb{R}}</m> are subgroups of <m>{\mathbb{C}}</m>? of <m>{\mathbb{R}}</m>? of <m>{\mathbb{Q}}</m>? Name as many subgroups of <m>{\mathbb{Z}}</m> as you can.
+      </p>
+    </example>
+    <example xml:id="example-subgroups-of-sn">
+      <p> Let <m>m,n\in{\mathbb{N}}</m> and assume that <m>n\leq m</m>. Then <m>S_n\leq S_m</m>. Recall that we used <m>X_n=\{1,2,\ldots,n\}</m> in defining the group <m>S_n</m>. Certainly this subgroup claim requires that we allow a function <m>\sigma:X_n\to X_n</m> to be thought of as a function <m>\sigma: X_m\to X_m</m> by mapping each element <m>k\in X_m\setminus X_n</m> to itself.
+      </p>
+    </example>
+    <exercises>
+      <exercise number="12.A">
+        <statement><p> Complete the missing parts above. They're listed below to help you out! 
+          <ol marker="(i)">
+          <li> Explain as briefly as possible by <m>\{e\}</m> and <m>G</m> are subgroups of a group <m>G</m>.</li>
+          <li> Complete the proof of <xref ref="theorem-subgroup"/>. In particular, you must show that in the backwards direction, we have that associativity holds, that the set <m>H</m> has an identity element, and that every element has an inverse in <m>H</m>.</li>
+          <li> Succinctly answer the questions in <xref ref="example-rings-as-subgroups"/>.</li>
+          <li> Prove the claim in <xref ref="example-subgroups-of-sn"/>. That is, prove that <m>S_n</m> is a subgroup of <m>S_m</m> when <m>n,m\in{\mathbb{N}}</m> with <m>n\leq m</m>.</li>
+          </ol>
+        </p></statement>
+      </exercise>
+      <exercise number="12.B">
+        <statement><p> Here are some basics of groups. Each problem has its own directions.
+          <ol marker="(i)">
+          <li> Let <m>IM_2({\mathbb{R}})</m> denote the set of invertible <m>2\times 2</m> matrices with entries in <m>{\mathbb{R}}</m>. Recall from Linear Algebra that this is the set <m>\{A\in M_2({\mathbb{R}})\mid \det(A)\neq 0\}</m>. Recall from Exercise 11.B(i) that <m>IM_2({\mathbb{R}})</m> is a group under matrix multiplication. Find at least three subgroups of this group, and three subsets which are not subgroups and justify your answers.</li>
+          <li> Let <m>G</m> be a group and <m>g_1,\ldots,g_n\in G</m>. The <term>subgroup of <m>G</m> generated by <m>g_1,\ldots,g_n</m></term> is defined as the smallest subgroup of <m>G</m> which contains <m>\{g_1,\ldots,g_n\}</m>, and denoted <m>\langle g_1,\ldots,g_n\rangle</m>. What is the subgroup of <m>S_4</m> generated by <m>(12)(34)</m>? What about the subgroup generated by <m>(12)</m> and <m>(34)</m>? What about the subgroup generated by <m>(123)</m> and <m>(12)(34)</m>?
+          </li></ol>
+        </p></statement>
+      </exercise>
+      <exercise number="12.C">
+        <statement><p>
+          Prove Lagrange's Theorem for finite groups, which states that if <m>G</m> is a (finite) group, and <m>H</m> is a subgroup of <m>G</m>, then the order of <m>H</m> divides the order of <m>G</m>.
+        </p></statement>
+        <hint>
+          <p>One way to approach this involves definite cosets of a subgroup. To that end, let <m>G</m> be a group and <m>H</m> a subgroup of <m>G</m>. Define an equivalence relation, <m>\sim</m>, on <m>G</m> via <m>x\sim y</m> if and only if <m>x^{-1}y\in H</m>. We define the <term>left cosets</term> of <m>H</m> in <m>G</m> to be the equivalence classes of the equivalence relation <m>\sim</m> on <m>G</m>. With this language, the most common way to state Lagrange's Theorem is that for any group <m>G</m> and any subgroup <m>H\leq G</m>, we have <m>|G|=[G:H]\cdot|H|</m> where <m>[G:H]</m> is the <term>index of <m>H</m> in <m>G</m></term>, defined to be the number of left (or right) cosets of <m>H</m> in <m>G</m>.
+          </p>
+        </hint>
+      </exercise>
+      <exercise number="12.D">
+        <statement><p>
+          For each statement, prove that it is true or give a counter-example to show that it is false.<ol marker="(i)">
+            <li>If <m>H</m> is a subgroup of <m>G</m> and <m>G</m> is abelian, then <m>H</m> is abelian.</li>
+            <li>If <m>H</m> is a subgroup of <m>G</m> and <m>G</m> is non-abelian, then <m>H</m> is non-abelian.</li>
+            <li>If <m>H</m> is a subgroup of <m>G</m> and <m>G</m> is finite, then <m>H</m> is finite.</li>
+            </ol>
+          </p></statement>
+      </exercise>
+    </exercises>
+</chapter>

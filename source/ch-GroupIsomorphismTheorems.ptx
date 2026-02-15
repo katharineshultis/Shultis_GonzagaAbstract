@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-GroupIsomThms" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Group Isomorphism Theorems</title><!--Chapter 16-->
+
+    <objectives>
+        <title>The learning outcomes in this chapter are to:</title>
+            <ul><li>...be able to state all three isomorphism theorems for groups.</li>
+            <li>...be able to use the group isomorphism theorems in examples.</li>
+            <li>...understand the need in many proofs for showing that the maps are well-defined.</li></ul>
+    </objectives>
+    <p>
+        There are three isomorphism theorems (telling us that creating certain algebraic structures always results in isomorphic structures) and they hold for many different kinds of algebraic structures. 
+        In this chapter, we'll focus on the group versions of the theorems. 
+        First, we'll need a definition:
+    </p>
+    <definition xml:id="def-groupkernel">
+        <statement>
+            <p>
+                Let <m>G</m> and <m>H</m> be groups and <m>\varphi:G\to H</m> be a group homomorphism. 
+                The <term>kernel</term> of <m>\varphi</m> is the subset of <m>G</m> defined as the set of stuff that maps to the appropriate identity, i.e.
+                <md><mrow>\ker(\varphi)=\{g\in G\mid \varphi(g)=e_H\}</mrow></md>
+	            where <m>e_H</m> denotes the identity element in <m>H</m>. 
+                Also, recall that the <term>image</term> of <m>\varphi</m> is the subset of <m>H</m> defined as
+		        <md><mrow>\operatorname{im}(\varphi)=\varphi(G)=\{\varphi(g)\mid g\in G\}=\{h\in H\mid h=\varphi(g)\text{ for some }g\in G\}</mrow></md>.
+            </p>
+        </statement>
+    </definition>
+    <p>
+        We've done less with groups than we have with rings so far, and the following facts could be useful in your proofs. 
+        The proofs of these facts are similar to the proofs of the similar facts for rings; however, I neither want to include them in lecture, nor ask you to put them in your portfolio. 
+        Maybe make Dr. Shultis prove them in class some time soon!?
+    </p>
+    <proposition xml:id="prop-groupfacts">
+        <statement>
+            <p>
+                Let <m>G</m> and <m>H</m> be groups written multiplicatively<fn>for notational convenience</fn> and <m>\varphi:G\to H</m> a group homomorphism.
+                <ol><li> If <m>e_G</m> and <m>e_H</m> denote the identity elements of <m>G</m> and <m>H</m> respectively, then <m>\varphi(e_G)=e_H</m>.</li>
+                <li>For any <m>g\in G</m>, we have <m>\varphi(g^{-1})=\varphi(g)^{-1}</m>.</li></ol>
+            </p>
+        </statement>
+    </proposition>
+    <theorem xml:id="thm-firstgroupisomtheorem">
+        <title>First Isomorphism Theorem for Groups</title>
+        <statement>
+            <p>
+                Let <m>G</m> and <m>H</m> be groups and <m>\varphi:G\to H</m> a group homomorphism. 
+                Then <m>\ker(\varphi)</m> is a normal subgroup of <m>G</m>, <m>\operatorname{im}(\varphi)</m> is a subgroup of <m>H</m> and
+		        <md><mrow>G/\ker(\varphi)\cong\operatorname{im}(\varphi)</mrow></md>.
+            </p>
+        </statement>
+    </theorem>
+    <p>
+        We have already abused multiplication notation by using it between two things that aren't actually group elements. 
+        We did this when we wrote <m>[a]</m> as <m>aH</m>. 
+        This is also similar to the abuse in notation from Quotient Rings. 
+        Taken literally, this is nonsense if <m>a</m> is a group element and <m>H</m> is a subgroup (i.e. a <em>set</em> of elements). But we just meant
+        <md><mrow>aH=\{ah:h\in H\}</mrow></md>.
+        Similarly, we will further abuse notation to "multiply" two sets of group elements <m>A\subseteq G</m> and <m>B\subseteq G</m> by multiplying every combination of their elements:
+        <md><mrow>AB=\{ab:a\in A,b\in B\}</mrow></md>.
+    </p>
+    <theorem xml:id="thm-secondgroupisomtheorem">
+        <title>Second Isomorphism Theorem for Groups</title>
+        <statement>
+            <p>
+                Let <m>G</m> be a group written multiplicatively<fn>for notational convenience</fn> and <m>A</m>, <m>B</m> subgroups of <m>G</m> with <m>B\lhd G</m>. 
+                Also, let <m>AB</m> denote the subset <m>\{ab\mid a\in A, b\in B\}</m> of <m>G</m>. 
+                Then, <m>AB</m> is a subgroup of <m>G</m>, <m>B</m> is a normal subgroup of <m>AB</m>, <m>A\cap B</m> is a normal subgroup of <m>A</m>, and 
+		        <md><mrow>A/(A\cap B)\cong (AB)/B</mrow></md>.
+            </p>
+        </statement>
+    </theorem>
+    <theorem xml:id="thm-thirdgroupisomtheorem">
+        <title>Third Isomorphism Theorem for Groups</title>
+        <statement>
+            <p>
+                Let <m>G</m> be a group, <m>H\subseteq K\subseteq G</m> with <m>H,K</m> normal subgroups of <m>G</m>. 
+                Then, <m>K/H</m> is a normal subgroup of <m>G/H</m> and
+		        <md><mrow>(G/H)/(K/H)\cong G/K</mrow></md>.
+            </p>
+        </statement>
+    </theorem>
+    <definition xml:id="def-freegroup">
+        <statement>
+            <p>
+                Let <m>X</m> be a (probably finite for now) set. 
+                Let <m>F(X)</m> denote the set of all "words" in the elements of <m>X</m> and their "inverses". 
+                So some examples of elements of <m>F(\{a,b,c,d,e\})</m> include <m>abbca^{-1}d^{-1}</m> and <m>ada^{-1}d^{-1}db</m>. 
+                Let <m>\star</m> be an operation on <m>F(X)</m> defined by concatenation so that for our example, <m>abbca^{-1}d^{-1}\star ada^{-1}d^{-1}db=abbca^{-1}d^{-1}ada^{-1}d^{-1}db</m>. 
+                Note also that we typically don't write <m>x</m> and <m>x^{-1}</m> immediately next to one another since they're inverse of each other and so cancel out. 
+                Also, when we have a string of several <m>x</m>'s in a row, we typically use exponential notation, so <m>aaa=a^3</m> and <m>b^{-1}b^{-1}=b^{-2}</m>, and our product above should be simplified to <m>ab^2ca^{-1}d^{-1}ada^{-1}b</m>. 
+                Then, <m>F(X)</m> is a group under this operation and is called the <term>free group on <m>X</m></term>.
+            </p>
+        </statement>
+    </definition>
+    <remark>
+        <p>
+            You have already seen the free group in the exercises. 
+            Indeed, Dr. Hogle added Exercise 11B.iii to the notes, and introduced us there to the free group on the set <m>X=\{x,y\}</m>.
+        </p>
+    </remark>
+    <example><title>A Quotient of a Free Group - Introducing Generators and Relations</title>
+        <p>
+            Let <m>G=\{r,f\}</m> and let <m>F</m> be the free group on <m>G</m>. 
+            Then, let <m>N</m> be the normal subgroup of <m>F</m> generated by <m>R=\{f^2,r^3,fr(r^2f)^{-1}\}</m>. Then <m>F/N\cong D_3</m>. 
+            Indeed, define a homomorphism <m>\varphi: F\to D_3</m> via <m>r\mapsto r</m> and <m>f\mapsto f</m>. 
+            Then, <m>r^3,f^2,fr(r^2f)^{-1}\in \ker(\varphi)</m> which means that <m>N\subseteq\ker(\varphi)</m> as <m>N</m> is the normal subgroup of <m>F</m> generated by <m>r^3</m>, <m>f^2</m>, and <m>fr(r^2f)^{-1}</m>. 
+            It can also be shown that <m>\ker(\varphi)\subseteq N</m>. 
+            Moreover, as <m>\operatorname{im}\varphi=D_3</m>, then <m>F/N\cong D_3</m>. 
+            We call <m>G</m> the set of <term>generators</term> of <m>D_3</m> and <m>R</m> the set of <term>relations</term> of <m>D_3</m><fn>Hence, the notational choices!</fn>. 
+            In fact, every group can be constructed in this way with a set of generators and relations! 
+            However, we'll leave that as an unproven fact for now.
+        </p>
+        <aside><title>More on Generators and Relations</title>
+            <p>The <m>G</m> is for "generators" and the <m>R</m> is for "relations." 
+            Moreover, when we say <m>N</m> is the normal subgroup generated by <m>R</m>, we mean that <m>N</m> is the smallest set in <m>F</m> which contains <m>R</m> and is a normal subgroup of <m>F</m>. </p>
+        </aside> 
+    </example>
+    <exercises xml:id="exercises-GroupIsomThms">
+        <exercise number="16.A">
+            <statement>
+                <p>
+                    Prove the First Isomorphism Theorem for Groups. The steps below should guide your proof.
+                    <ol marker="(i)">
+                        <li>Show that <m>\ker(\varphi)</m> is a normal subgroup of <m>G</m>. 
+                            Note that this requires proving that <m>\ker(\varphi)</m> is a subgroup and that it's normal. 
+                            We, unfortunately, don't have a "normal subgroup test."
+                        </li>
+                        <li>
+                            Show that <m>\operatorname{im}(\varphi)</m> is a subgroup of <m>H</m> (presumably using the subgroup test).
+                        </li>
+                        <li>
+                            Define the "obvious" function to use here <m>f:G/\ker(\varphi)\to\operatorname{im}(\varphi)</m>. 
+                            As you may not yet have enough experience to have an instinct as to what the "obvious" function is, I'd be happy to have a whole class discussion about ideas/suggestions that you do have.
+                        </li>
+                        <li>
+                            Since elements of <m>G/\ker(\varphi)</m> are cosets (and hence typically have multiple coset representatives), we'll need to show the function we wrote down is "well-defined." 
+                            That is, using <m>N</m> to denote <m>\ker(\varphi)</m>, we need that for any <m>gN=g'N</m>, we have <m>f(gN) = f(g'N)</m>. 
+                            If this step fails, that's a good hint that our function in the previous step is wrong.
+                        </li>
+                        <li>
+                            Now that we know <m>f</m> is a well-defined function between the two groups we want to show are isomorphic, we need to show that <m>f</m> is a group homomorphism. 
+                            This step should be straight-forward. 
+                            Use the definition of a homomorphism and the way that <m>f</m> is defined.
+                        </li>
+                        <li>
+                            We also need to show that <m>f</m> is a bijection.
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+        </exercise>
+        <exercise number="16.B">
+            <statement>
+                <p>
+                    These are some basic exercises on using the isomorphism theorems.
+                    <ol marker="(i)">
+                        <li>
+                            Prove that <m>Q_8/Z\cong \Z/2\Z\times\Z/2\Z</m> using the First Isomorphism Theorem.
+                        </li>
+                        <li>
+                            Let <m>F</m> be a field and let <m>1</m> denote the multiplicative identity in <m>F</m>. 
+                            The notation <m>GL_2(F)</m> denotes the group of <m>2\times 2</m> matrices with nonzero determinant and entries in <m>F</m>. 
+                            The notation <m>SL_2(F)</m> denotes the subgroup of <m>GL_2(F)</m> where the matrices in <m>GL_2(F)</m> have determinant <m>1</m>. 
+                            The notation <m>F^\ast</m> denotes the nonzero elements of <m>F</m>, i.e. the elements of <m>F</m> which have multiplicative inverses. 
+                            Lastly, the notation <m>F^\ast\cdot I_2</m> denotes the <m>2\times 2</m> matrices of the form <md><mrow>\begin{pmatrix}<![CDATA[
+                            a & 0 \\
+                            0 & a
+                            ]]>\end{pmatrix}</mrow></md> with <m>a\in F^\ast</m>. 
+                            Use the Second Isomorphism Theorem for Groups to show that <m>GL_2({\mathbb C})/({\mathbb C}^\ast\cdot I)\cong SL_2({\mathbb C})/\{\pm I_2\}</m> where <m>\{\pm I_2\}=\begin{pmatrix}<![CDATA[
+                            1 & 0 \\
+                            0 & 1
+                            ]]>\end{pmatrix}</m>.
+                        </li>
+                        <li>
+                            Note that <m>H=\{(1),(12)(34),(13)(24),(14)(23)\}</m> is a normal subgroup of <m>S_4</m> which is contained in
+                            <md><mrow>A_4=\{(1),(123),(132),(124),(142),(134),(143),(234),(243),(12)(34),(13)(24),(14)(23)\}</mrow></md>.
+                            We will spend some time in the next chapter learning more about the notation for the symmetric groups, <m>S_n</m>. 
+                            In this exercise, use the Third Isomorphism Theorem for Groups with these groups to prove a new isomorphism. 
+                            This should be doable even without the knowledge you will learn in the next chapter. <fn>Is this too vague of a problem? Do you need more guidance?</fn>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+        </exercise>
+        <exercise number="16.C">
+            <statement>
+                <p>
+                    Prove the Second Isomorphism Theorem for Groups. 
+                    To prove it, you'll need to show that <m>AB</m> is a subgroup of <m>G</m>, <m>A</m> is a normal subgroup of <m>AB</m>, and <m>A\cap B</m> is a normal subgroup of <m>B</m>. 
+                    You'll then need to go about showing the claimed isomorphism holds. 
+                    To show that isomorphism, you can either appeal to <xref ref="thm-firstgroupisomtheorem"/>, or write down a function and show it is a (well-defined) bijective homomorphism.
+                </p>
+            </statement>
+        </exercise>
+        <exercise number="16.D">
+            <statement>
+                <p>
+                    Prove the Third Isomorphism Theorem for Groups. 
+                    To prove it, you'll need to show that <m>H/K</m> is a normal subgroup of <m>G/K</m>. 
+                    You'll then need to go about showing the claimed isomorphism holds. 
+                    To show that isomorphism, you can either appeal to <xref ref="thm-firstgroupisomtheorem" />, or write down a function and show it is a (well-defined) bijective homomorphism.
+                </p>
+            </statement>
+        </exercise>
+    </exercises>
+</chapter>
