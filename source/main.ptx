@@ -30,6 +30,10 @@
     <xi:include href="./ch-GroupIsomorphismTheorems.ptx" />
     <xi:include href="./ch-TheGroupSn.ptx" />
     <xi:include href="./ch-Monoids.ptx" />
+    <xi:include href="./ch-Semigroups.ptx" />
+    <xi:include href="./ch-Modules.ptx" />
+    <xi:include href="./ch-Submodules.ptx" />
+    <xi:include href="./ch-ModuleHomandQuotient.ptx" />
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />
