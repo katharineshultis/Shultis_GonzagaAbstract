@@ -186,4 +186,59 @@
   </statement>
 </corollary>
 
+<exercises>
+	<exercise number="17.A">
+    <statement>
+      <p>
+        Complete the missing parts above. They’re listed below to help you out!
+      </p>
+      <ol marker="(i)">
+        <li>
+          <p>
+            Prove <xref ref="prop-transselfinvert"/>.
+         </p>
+        </li>
+        <li>
+          <p>
+            Prove that <m>A_{n}</m> is a subgroup of <m>S_{n}</m>.
+            Then prove that the subgroup <m>A_{n}</m> of <m>S_{n}</m> is normal.
+            One strategy here is to show that <m>[S_{n}:A_{n}]=2</m>.
+            The best way to attempt this strategy would be to think about the possible standard cycle decompositions of elements of <m>S_{n}</m> and explain why half of them are even and half are odd.
+            Another strategy would be to prove this from the definition of normal and think about cycle structures.
+            It’s worth thinking about both strategies even though you only need one proof.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+  <exercise number="17.B">
+      <statement> Here are some examples to play with.
+        <ol>
+        <li>
+          <p>
+            List all elements of <m>S_{3}</m> and identify each as even or odd by two methods: writing the element as a product of transpositions and counting the number of transpositions, and by counting the number of even cycles in the standard representation of the element.
+          </p>
+        </li>
+        <li>
+          <p>
+           Repeat the previous problem for <m>S_{4}</m>, but split the elements into two approximately evenly sized sets and only do one method per set.
+           Try to split the elements in such a way that you learn the most from this exercise, and don’t make me split them for you!
+         </p>
+        </li>
+        <li>
+          <p>
+          Do it again for <m>(12345)\in S_{5}</m> and <m>(123)(45)\in S_{7}</m> using both strategies and check that the first is even and the second is odd.
+          Do either of these facts surprise you? Explain your answer in the context of the work you’ve done elsewhere and using both strategies for identifying evenness or oddness of a permutation.
+         </p>
+       </li>
+        </ol>
+      </statement>
+  </exercise>
+  <exercise number="17.C">
+    <statement> <p>Nah. This seems sufficient, unless you want to explore the missing theorem to prove that def:permparity makes sense.
+        Another option if you want more would be to look into the proof of <xref ref="thm-oddcycles"/>.
+        For either of these, let me know what you’re interested in and I can either type something up or give you a reference to read.
+    </p></statement>
+  </exercise>
+</exercises>
 </chapter>
