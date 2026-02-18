@@ -71,6 +71,19 @@
     </statement>
   </definition>
 
+  <definition xml:id="def-GroupProduct">
+    <title>Direct Product of Groups</title>
+    <statement>
+      <p>
+        Let <m>G,H</m> be groups with operations <m>\circ,\ast</m> respectively. 
+        Then <m>G\times H=\{(g,h)\mid g\in G, h\in H\}</m> is a group with operation we'll denote temporarily as <m>\circ\times\ast</m> defined by
+        <md>
+          <mrow>(g_1,h_1)(\circ\times\ast)(g_2,h_2)=(g_1\circ g_2,h_1\ast h_2)</mrow>
+        </md>.
+      </p>
+    </statement>
+  </definition>
+
   <example>
     <title>An Isomorphism</title>
     <p>Recall that the group <m>Q_8/Z</m> from <xref ref="eg-Q8modZ"/> looked an awful lot like <m>\Z/2\Z\times\Z/2\Z</m>.
