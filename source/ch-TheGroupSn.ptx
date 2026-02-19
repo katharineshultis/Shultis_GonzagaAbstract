@@ -213,7 +213,7 @@
   </exercise>
   <exercise number="17.B">
       <statement> <p>Here are some examples to play with.</p>
-        <ol>
+        <ol marker="(i)">
         <li>
           <p>
             List all elements of <m>S_{3}</m> and identify each as even or odd by two methods: writing the element as a product of transpositions and counting the number of transpositions, and by counting the number of even cycles in the standard representation of the element.
