@@ -187,7 +187,7 @@
             <statement>
                 <p>
                     Prove the Second Isomorphism Theorem for Groups. 
-                    To prove it, you'll need to show that <m>AB</m> is a subgroup of <m>G</m>, <m>A</m> is a normal subgroup of <m>AB</m>, and <m>A\cap B</m> is a normal subgroup of <m>B</m>. 
+                    To prove it, you'll need to show that <m>AB</m> is a subgroup of <m>G</m>, <m>A</m> is a normal subgroup of <m>AB</m>, and <m>A\cap B</m> is a normal subgroup of <m>A</m>. 
                     You'll then need to go about showing the claimed isomorphism holds. 
                     To show that isomorphism, you can either appeal to <xref ref="thm-firstgroupisomtheorem"/>, or write down a function and show it is a (well-defined) bijective homomorphism.
                 </p>
