@@ -167,10 +167,13 @@
                             a & 0 \\
                             0 & a
                             ]]>\end{pmatrix}</mrow></md> with <m>a\in F^\ast</m>. 
-                            Use the Second Isomorphism Theorem for Groups to show that <m>GL_2({\mathbb C})/({\mathbb C}^\ast\cdot I)\cong SL_2({\mathbb C})/\{\pm I_2\}</m> where <m>\{\pm I_2\}=\begin{pmatrix}<![CDATA[
+                            Use the Second Isomorphism Theorem for Groups to show that <m>GL_2({\mathbb C})/({\mathbb C}^\ast\cdot I)\cong SL_2({\mathbb C})/\{\pm I_2\}</m> where <m>\{\pm I_2\}=\left\{\begin{pmatrix}<![CDATA[
                             1 & 0 \\
                             0 & 1
-                            ]]>\end{pmatrix}</m>.
+                            ]]>\end{pmatrix},\begin{pmatrix}<![CDATA[
+                            -1 & 0 \\
+                            0 & -1
+                            ]]>\end{pmatrix}\right\}</m>.
                         </li>
                         <li>
                             Note that <m>H=\{(1),(12)(34),(13)(24),(14)(23)\}</m> is a normal subgroup of <m>S_4</m> which is contained in
