@@ -1,9 +1,8 @@
 This doesn't need to be a good file, just to have stuff needed for the project in it.
 
 Tasks:
-Chapters 12, 13, 14, 15, 16, 17 update to implement better formatting
-Chapter 18 finalize for Spring 2026
-Chapter 19, 20, 21, 22, 23 draft for Spring 2026
-Chapter 19, 20, 21, 22, 23 finalize for Spring 2026
+Chapters 12, 13, 14, 15, 16, 17, (18?) update to implement better formatting
+Chapter 19, 20, 21, 22 draft for Spring 2026
+Chapter 19, 20, 21, 22 finalize for Spring 2026
 Chapters 1-11 draft and finalize
-Chapters 12-23 references to Chapters 1-11 implement
+Chapters 12-22 references to Chapters 1-11 implement

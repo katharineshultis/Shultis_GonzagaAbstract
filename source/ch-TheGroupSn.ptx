@@ -235,7 +235,7 @@
       </statement>
   </exercise>
   <exercise number="17.C">
-    <statement> <p>Nah. This seems sufficient, unless you want to explore the missing theorem to prove that def:permparity makes sense.
+    <statement> <p>Nah. This seems sufficient, unless you want to explore the missing theorem to prove that <xref ref="def-permparity"/> makes sense.
         Another option if you want more would be to look into the proof of <xref ref="thm-oddcycles"/>.
         For either of these, let me know what you’re interested in and I can either type something up or give you a reference to read.
     </p></statement>
