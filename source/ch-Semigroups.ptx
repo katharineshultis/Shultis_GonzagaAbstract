@@ -3,7 +3,253 @@
 <chapter xml:id="ch-Semigroups" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>What is a Semigroup?</title><!--Chapter 19-->
 
+<objectives>
+  <title>The learning outcomes for this chapter are to...</title>
+  <ul><li><p>...understand the definition of a semigroup.</p></li>
+    <li><p>...be able to give several examples of semigroups.</p></li>
+  </ul>
+</objectives>
+
+<p>
+  As promised, I’m going to continue taking properties away from you.
+  While it’s still certainly possible to take away associativity, I’m still less well-versed in such algebraic structures.
+  Instead, the next property I’m taking away from you is the existence of an identity element.
+  Here’s our definition:
+</p>
+
+<definition xml:id="defn-semigroup">
+  <statement>
+    <p>
+      A <alert>semigroup</alert> <m>(S,\star)</m> is a set <m>S</m> together with an operation <m>\star</m> such that: <dl>
+      <li>
+        <title>(A)</title>
+        <p>
+          The operation is associative.
+        </p>
+      </li>
+      </dl>
+    </p>
+  </statement>
+</definition>
+
+<remark>
   <p>
-     This is coming soon(ish)!
+    It would be silly to discuss a “semigroup with identity” or even pretend that we had inverses in such an object.
+    Indeed, with an identity, our semigroup becomes a monoid, and inverses do not make sense without the existence of an identity.
+  </p>
+</remark>
+
+<example>
+  <statement>
+    <p>
+      Note that every monoid satisfies the conditions for being a semigroup, so every monoid is a semigroup.
+    </p>
+  </statement>
+</example>
+
+<example>
+  <statement>
+    <p>
+      Recall that the multiplicative requirements on a ring (ignoring the existence of addition) is simply that multiplication is associative.
+      Thus, every ring is a semigroup under multiplication.
+    </p>
+  </statement>
+</example>
+
+<remark>
+  <p>
+    Don’t forget here that in order for a ring to be a group, we insisted that we were looking at the addition operation.
+    Also, we were able to turn the multiplication of any field into a group, but only by removing the zero element from the set first.
+  </p>
+</remark>
+
+<example>
+  <statement>
+    <p>
+      All of our favorite sets and operations are associative, so <m>\N,\Z,\Q,\R,\C</m> are all semigroups under both addition and multiplication.
+      Also, note that this holds true regardless of whether or not you consider <m>\N</m> to include <m>0</m>.
+    </p>
+  </statement>
+</example>
+
+<p>
+  New and interesting semigroups are a bit harder to find, despite the fact that there’s so little required.
+  In part, this is because most of our examples started out as at least groups or rings, if not as fields.
+  Also, there’s only been one example all year of a non-associative operation, see Exercise 11.B(ii), so almost every set/operation we’ve seen is a semigroup.
+  Also, most of our operations have had identity elements, so they’re mostly monoids too.
+  Perhaps we should look closer at the notes to see if I’ve missed any semigroups that we’ve seen before.
+  However, we do get a very interesting new semigroup that hasn’t been a possible example until now.
+</p>
+
+<example>
+  <statement>
+    <p>
+      The emptyset is a semigroup.
+      Is this obvious? What’s the operation?
+    </p>
+  </statement>
+</example>
+
+<p>
+  As with monoids, we’re only going to do the one chapter on semigroups, so here’s a formal definition of a subsemigroup.
+  Remember that a subsemigroup is a “sub-semigroup!”
+</p>
+
+<definition>
+  <statement>
+    <p>
+      Let <m>(S,\star)</m> be a semigroup.
+      A set <m>T</m> is a <alert>subsemigroup</alert> of <m>S</m> if: <dl>
+      <li>
+        <title>(S)</title>
+        <p>
+          The set <m>T</m> is a subset of <m>S</m>.
+        </p>
+      </li>
+      <li>
+        <title>(Cl)</title>
+        <p>
+          If <m>a,b\in T</m>, then so is <m>a\star b</m>.
+        </p>
+      </li>
+      <li>
+        <title>(S)</title>
+        <p>
+          The set <m>T</m> together with the operation <m>\star</m> is a semigroup.
+          That is, it satisfies the axioms of a semigroup: <dl>
+          <li>
+            <title>(A)</title>
+            <p>
+              The operation is associative.
+            </p>
+          </li>
+          </dl>
+        </p>
+      </li>
+      </dl>
+    </p>
+  </statement>
+</definition>
+
+<remark>
+  <p>
+    At best, this seems a bit silly.
+    We have two items denoted (S) on the list. 
+    The first is indicating it must be a subset, the second is indicating it must be a semigroup.
+    Perhaps we should note that restricting the operation to the subset <m>T</m> cannot possibly turn the operation into a non-associative operation and remove the second item (S) from the list?
+  </p>
+</remark>
+
+<remark>
+  <p>
+    In the definitions of subring, subgroup, and submonoid, we insisted that the relevant subset be nonempty (although it was always in parentheses).
+    It’s missing here.
+    What’s up with that?
+  </p>
+</remark>
+
+<p>
+  There’s certainly more that we could put in the chapter about semigroups including quotients, homomorphisms, isomorphisms, isomorphism theorems, etc.
+  However, as with monoids, I’m going to put some of that in the optional exercises and skip the rest of it since these are less well studied for semigroups than they are for many other algebraic structures.
+</p>
+
+<exercises xml:id="exercises-Semigroups">
+  <exercise number="19.A">
+    <statement>
+      <p>
+        Complete the missing parts above. They're listed below to help you out!
+        <ol marker="(i)">
+          <li>
+            <p>
+              Explain why the emptyset is indeed a semigroup.
+            </p>
+          </li>
+          <li>
+            <p>
+              Go back through the class notes, your exam examples, and chat with your classmates about their made up exam examples. 
+              Are there examples of semigroups in any of this older work that aren't included (explicitly or implicitly) in the examples of this chapter? 
+              If so, what are they? If not, come up with at least one such example.
+            </p>
+          </li>
+          <li>
+            <p>
+              In our definitions of all other sub-objects this year, we've required that the new sub-object be a (nonemtpy) subset of the original object.
+              In such chapters, I made you explain why the word nonempty was in parentheses.
+              It's missing in this definition.
+              Why?
+              How is this different from what we've seen before?
+            </p>
+          </li>
+        </ol>
       </p>
+    </statement>
+  </exercise>
+  <exercise number="19.B">
+    <statement>
+      <p>
+        Here are some (non-)examples of semigroups.
+        Each problem has its own directions.
+        <ol marker="(i)">
+          <li>
+            <p>
+              Let <m>S</m> be a set and define an operation <m>\star</m> on <m>S</m> via <m>a\star b=b</m> for all <m>a,b\in S</m>.
+              Show that <m>S</m> is a semigroup.
+              Under what condition(s) is <m>S</m> a monoid?
+            </p>
+          </li>
+          <li>
+            <p>
+              Let <m>X</m> be the set of all eight letter words (definied to be any string of eight letters of the English alphabet, probably meaningless).
+              Define an operation <m>\heartsuit</m> on <m>X</m> via
+              <md>
+                <mrow>a_1a_2a_3a_4a_5a_6a_7a_8\heartsuit b_1b_2b_3b_4b_5b_6b_7b_8=a_1a_2a_3a_4a_5b_6b_7b_8</mrow>
+              </md>
+              and an operation <m>\diamondsuit</m> on <m>X</m> via
+              <md>
+                <mrow>a_1a_2a_3a_4a_5a_6a_7a_8\diamondsuit b_1b_2b_3b_4b_5b_6b_7b_8=a_5a_6a_7a_8b_1b_2b_3b_4.</mrow>
+              </md>
+              Does either operation turn <m>X</m> into a semigroup?
+              What about a monoid?
+            </p>
+          </li>
+          <li>
+            <p>
+              Let <m>(M,\star)</m> be a monoid and fix <m>m\in M</m>.
+              Define an operation <m>\clubsuit</m> on <m>M</m> via <m>a\clubsuit b=amb</m>.
+              Show that this defines a semigroup.
+              Under what condition on <m>m</m> is <m>(M,\clubsuit)</m> a monoid?
+            </p>
+          </li>
+          <li>
+            <p>
+              Let <m>S</m> be a semigroup and fix some <m>u\notin S</m>. Form a new set <m>M=S\cup\{u\}</m> and extend the product on <m>S</m> to a product on <m>M</m> by defining <m>ua=a=au</m> for all <m>a\in M</m>.
+              Show that <m>M</m> is a monoid.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+  <exercise number="19.C">
+    <statement>
+      <p>
+        Let <m>(G,\cdot)</m> be a semigroup with a <em>right unit</em>, 
+        i.e. an element <m>1_{r}</m> satisfying <m>a\cdot 1_{r}=a</m> for all <m>a\in G</m>, and a <em>right inverse</em> for every <m>a\in G</m>, 
+        i.e. for every <m>a\in G</m>, there is some element <m>a'\in G</m> such that <m>aa'=1_{r}</m>.
+        Show that <m>G</m> is a group.
+      </p>
+    </statement>
+  </exercise>
+  <exercise number="19.D">
+    <statement>
+      <p>
+        Let <m>G</m> be a nonempty subset of a monoid <m>(M,\spadesuit)</m>.
+        Show that <m>G</m> is a group if and only if every <m>g\in G</m> is invertible in <m>M</m> and <m>g^{-1}\spadesuit h\in G</m> for any <m>g,h\in G</m>.
+      </p>
+    </statement>
+  </exercise>
+</exercises>
+<remark>
+  <p>Note that the <m>\LaTeX</m> commands to type the suits are <c>\heartsuit, \diamondsuit, \spadesuit, \clubsuit</c>.</p>
+</remark>
 </chapter>
