@@ -250,7 +250,7 @@
   </exercise>
   <exercise number="18.F">
     <p>
-      Consider the “Chicken nugget problem” which was asked on the NPR program <em>Car Talk</em>:
+      Consider the “Chicken nugget problem” which was asked on the NPR program <em>Car Talk</em>:</p>
       <blockquote><p><q>A famous fast-food restaurant sells chicken nuggets.
         They come in three sizes, a box of <m>6</m>, a box of <m>9</m>, or a box of <m>20</m>.
         You order chicken nuggets by the box.
@@ -260,7 +260,7 @@
         But you can’t purchase exactly <m>31</m> chicken nuggets.
         Might there be a larger number for which an exact order is not possible? Here’s our question of the day: What is the largest number of chicken nuggets that you cannot order exactly?
       </q></p></blockquote>
-      Here’s your task as a student in Math 438 working on this problem.
+      <p>Here’s your task as a student in Math 438 working on this problem.
       First, solve the chicken nugget problem, making sure to explain and fully justify your answer.
       Then, explain what this has to do with monoids.
     </p>

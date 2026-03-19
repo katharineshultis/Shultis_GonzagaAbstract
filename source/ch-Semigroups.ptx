@@ -153,6 +153,10 @@
   However, as with monoids, I’m going to put some of that in the optional exercises and skip the rest of it since these are less well studied for semigroups than they are for many other algebraic structures.
 </p>
 
+<remark>
+  <p>Note that the <m>\LaTeX</m> commands to type the suits are <c>\heartsuit, \diamondsuit, \spadesuit, \clubsuit</c>.</p>
+</remark> 
+
 <exercises xml:id="exercises-Semigroups">
   <exercise number="19.A">
     <statement>
@@ -249,7 +253,4 @@
     </statement>
   </exercise>
 </exercises>
-<remark>
-  <p>Note that the <m>\LaTeX</m> commands to type the suits are <c>\heartsuit, \diamondsuit, \spadesuit, \clubsuit</c>.</p>
-</remark>
 </chapter>

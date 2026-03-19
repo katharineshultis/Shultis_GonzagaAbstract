@@ -3,7 +3,208 @@
 <chapter xml:id="ch-Modules" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>What is a Module?</title><!--Chapter 20-->
 
+  <objectives>
+    <title>The learning outcomes for this chapter are to...</title>
+    <ul><li><p>...understand the definition of a module.</p></li>
+      <li><p>...be able to give several examples of modules.</p></li>
+    </ul>
+  </objectives>
+
   <p>
-     This is coming soon(ish)!
+    The way I think of a module is that it’s exactly like a vector space, except over a ring instead of a field.
+    However, if you’re not confident you’ve got the axioms of a vector space right, this poses an issue.
+    Informally, the key to vector spaces is that we can add vectors together, and we can scale them by our constants, which come from a field (frequently <m>\R</m> in your past courses as early introductions typically happen in Calculus and Linear Algebra courses).
+    Also, things work “nicely” or “as expected.” Here’s a more formal definition of a module.
+    If you’d like a formal definition of a vector space, replace the ring below with a field.
+  </p>
+
+  <definition xml:id="defn-Module">
+    <statement>
+      <p> Let <m>(R,+_{R},\cdot)</m> be a ring and <m>(M,+_{M})</m> an abelian group.
+        We say <m>M</m> is a <alert>left <m>R</m>-module</alert> (or just a <alert>left module</alert> if the ring in question is clear) if there is a function <m>\mu:R\times M\to M</m> typically denoted as <m>\mu(r,m)=rm</m> for all <m>r\in R</m> and <m>m\in M</m> such that the following properties hold: 
+        <dl>
+        <li><title>(A)</title><p>
+            A sort of “associative property” holds.
+            For all <m>r,s\in R</m> and <m>m\in M</m>, we have <m>r(sm)=(r\cdot s)m</m>.</p></li>
+        <li><title>(D)</title><p>
+            Two sort of “distributive properties” hold.
+            For all <m>r,s\in R</m> and <m>m,n\in M</m>, we have
+            <me>
+              (r+_{R}s)m=rm+_{M}sm
+            </me>
+            and
+            <me>
+              r(m+_{M}n)=rm+_{M}rn.
+            </me></p></li></dl> 
+        If <m>R</m> has an identity, denoted <m>1</m>, then we also require that the identity satisfies
+        <me>
+          1m=m
+        </me>
+        for all <m>m\in M</m>.
       </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <p>
+      We could also define a <alert>right <m>R</m>-module</alert> with a function <m>\nu:M\times R\to M</m> by insisting instead that <m>m(r\cdot s)=(mr)s</m>, <m>(m+_{M}n)s=ms+_{M}ns</m>, and <m>m(r+_{R}s)=mr+_{M}ms</m>.
+      Note that an abelian group could simultaneously be a left <m>R</m>-module and a right <m>S</m>-module.
+      As long as these two module structures are compatible, we call this an <alert> <m>R</m>-<m>S</m>-bimodule</alert>.
+      I currently have zero intention to discuss bimodules further than this awkward remark.
+    </p>
+  </remark>
+
+  <remark>
+    <p>
+      If <m>R</m> is a commutative ring, then every left <m>R</m>-module is automatically a right module as well via <m>\nu(m,r)=rm=\mu(r,m)</m>, and so we drop the left/right distinction and simply refer to <m>R</m>-modules when <m>R</m> is commutative.
+    </p>
+  </remark>
+
+  <example>
+    <statement>
+      <p>
+        Any ring, <m>R</m>, is both a left and right <m>R</m>-module.
+        Why?
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Consider the (commutative) ring <m>R=\R</m> and abelian group (under addition) <m>M=\R[X]</m>.
+        We have that <m>M</m> is an <m>R</m>-module.
+        Indeed, for any <m>r\in R</m> and <m>m\in M</m>, we know that <m>r</m> is a real number and <m>m</m> is a polynomial in <m>X</m> with real coefficients.
+        The module action <m>\mu:R\times M\to M</m> is given by the multiplication <m>\mu(r,m)=rm</m> where we think of <m>r</m> as a linear polynomial.
+        What else needs to be shown?
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>R</m> be a ring and <m>I</m> a left ideal of <m>R</m>.
+        Then <m>I</m> is a left <m>R</m>-module.
+        Is this clear?
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>(G,+)</m> be an abelian group.
+        Then <m>G</m> is a <m>\Z</m>-module.
+        Is this clear?
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>R</m> be a commutative ring and <m>I</m> an ideal of <m>R</m>.
+        Then <m>R/I</m> is an <m>R</m>-module.
+        Indeed, we can define the function <m>\mu</m> via
+        <md>
+          <mrow>\mu(r,a+I)=ra+I, \text{ i.e.
+          }r({a}+I)=(ra)+I\text{ for }r\in R,~a+I\in R/I.</mrow>
+        </md>
+        Should we check this is well-defined, or is that clear? With this function in place, we can show the required properties: <dl>
+        <li>
+          <title>(A)</title>
+          <p>
+            For <m>r,s\in R</m> and <m>a+I\in R/I</m>, we have
+            <md>
+              <mrow>r(s(a+I))&amp;=r((sa)+I)</mrow>
+              <mrow>&amp;=r(sa)+I</mrow>
+              <mrow>&amp;=(rs)a+I</mrow>
+              <mrow>&amp;=(rs)(a+I).</mrow>
+            </md>
+          </p>
+        </li>
+        <li>
+          <title>(D)</title>
+          <p>
+            For <m>r,s\in R</m> and <m>a+I,b+I\in R/I</m>, we have
+            <md>
+              <mrow>(r+s)(a+I)&amp;=((r+s)a)+I</mrow>
+              <mrow>&amp;=(ra+sa)+I</mrow>
+              <mrow>&amp;=(ra+I)+(sa+I)</mrow>
+            </md>
+            and
+            <md>
+              <mrow>r((a+I)+(b+I))&amp;=r((a+b)+I)</mrow>
+              <mrow>&amp;=(r(a+b))+I</mrow>
+              <mrow>&amp;=(ra+rb)+I</mrow>
+              <mrow>&amp;=(ra+I)+(rb+I).</mrow>
+            </md>
+          </p>
+        </li>
+        </dl>
+      </p>
+    </statement>
+  </example>
+
+<exercises xml:id="exercises-Modules">
+  <exercise number="20.A">
+    <statement>
+      <p>
+        Complete the missing parts above.
+        They’re listed below to help you out!
+      </p>
+      <ol marker="(i)">
+        <li>
+          <p>
+            Explain why, for any ring <m>R</m>, <m>R</m> is both a left and right <m>R</m>-module.
+          </p>
+        </li>
+        <li>
+          <p>
+            Fill in the missing details to show that <m>\R[X]</m> is an <m>\R</m>-module.
+            Note that as <m>\R</m> is a field, this should mean that <m>\R[X]</m> is a <m>\R</m>-vector space! What’s the vector space dimension?
+          </p>
+        </li>
+        <li>
+          <p>
+            Show that for any left ideal <m>I</m> of any ring <m>R</m>, <m>I</m> is a left <m>R</m>-module.
+          </p>
+        </li>
+        <li>
+          <p>
+            Show that every abelian group <m>G</m> is a <m>\Z</m>-module.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+  <exercise number="20.B">
+    <statement>
+      <p>
+        Here are some basic properties of modules.
+        For each, let <m>R</m> be a ring with identity, and <m>M</m> a left <m>R</m>-module.
+      </p>
+      <ol marker="(i)">
+        <li>
+          <p>
+            Show that <m>0m=0</m> and <m>(-1)m=-m</m> for all <m>m\in M</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Assume that <m>rm=0</m> for some <m>r\in R</m> and <m>m\in M\setminus\{0\}</m>.
+            Prove that <m>r</m> does not have a left inverse, i.e.
+            there is no element <m>s\in R</m> such that <m>sr=1</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+  <exercise number="20.C">
+    <statement><p>
+      I want to separate out submodules as a separate chapter, and then hopefully do module homomorphisms, so let’s skip this part here!
+    </p></statement>
+  </exercise>
+</exercises>
 </chapter>
