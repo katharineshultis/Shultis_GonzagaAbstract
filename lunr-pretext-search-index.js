@@ -1321,7 +1321,151 @@ var ptx_lunr_docs = [
   "type": "Chapter",
   "number": "21",
   "title": "Submodules",
-  "body": " Submodules  This is coming soon(ish)!  "
+  "body": " Submodules   The learning outcomes for this chapter are to...  ...understand the definition of a submodule.  ...be able to give several examples of submodules.    As you might expect at this point, one potential definition of a submodule is that it is a SUB-MODULE! That is, a submodule is a subset of a module that is itself a module. Here’s a more formal definition of a left submodule:    Let be a ring and a left -module. A set is a left -submodule of if:   (S)  The set is a subgroup of .    (Cl)  If and , then .    (M)  The set together with the operation is a left -module. That is, the “associative” and “distributive” and possibly “identity” type properties hold.        It should be noted that this definition looks different than our previous definitions of sub-objects. I tried hard to find a non-awkward way to keep the definition seeming more similar and failed. I’ve done my best to make this feel similar though. Perhaps the first part of the exercises should be asking you to try your hand at a more similar definition.    It should also be noted here that the third item is trivial given the first two. Is that obvious?     Let be a ring and a left -module. Then both and are left -submodules of . Indeed, both are subgroups of the group . Also, for and , we have and by definition of a module we also have for every and .      Let be a ring and consider as a left -module. Every left ideal of is a left -submodule. Indeed, if is a left ideal, then is a subgroup of under the addition operation. Also, if and , we have that , and so the closure condition holds as well.      Let be a commutative ring, and ideals of with . Recall that is an -module. We can show that is a submodule of using the left submodule test. Indeed, note from the Third Isomorphism Theorem for Rings that is an ideal of .      The Left Submodule Test   Let be a ring and a left -module. A nonempty subset of is a submodule of if and only if for all and .     Actually, I’m positive you can do this on your own!       Complete the missing parts above. They’re listed below to help you out!    Using the models of the definitions of subring, subgroup, submonoid, and subsemigroup, write a better definition of a submodule.    Explain (as briefly as possible) why the condition (M) in the given definition of a submodule is trivial.    Prove the left submodule test.       Actually, let’s skip this one this time. In exchange, I’m going to ask you to do two of the remaining “cool” problems.    Let be a ring with identity, a left ideal of , and a left -module. Prove that the set is a left -submodule of .      Let be a ring with identity and a left -module of . An element is said to be a torsion element if for some . The set of torsion elements is Recall that an integral domain is a commutative ring with identity and no zerodivisors. Prove that if is an integral domain then is a submodule of and give an example of a ring and an left -module such that is not a left -submodule of .      Let be a commutative ring with identity, an -module and ideals of . The colon submodule is a submodule of defined by: Prove that this is indeed a submodule of . Also, note that if , then is an -submodule of , i.e. an ideal, and compute the colon ideal in the ring for a field.    Let be a ring with identity and a left -module. Suppose that for each , is a left -submodule of , and that . Prove that is a left -submodule of .    Let be a ring with identity and a left -module. Suppose that and are left -submodules. Prove that is a left -submodule of .    Note that there were some restrictions in the two previous problems.   For the union of an infinite collection of submodules to be a submodule, we required that those submodules were nested. Either find an example of a ring, a module, and a collection of submodules where the union is not a submodule - note that your collection could be finite or infinite, but it will have to be unnested - or prove that any union of -submodules of is also a submodule.  For the intersection of a collection of submodules to be a submodule, we required that the collection be finite and nonempty. Either find an example showing that condition is necessary, or show that that the intersection of any collection of -submodules of is a submodule.      "
+},
+{
+  "id": "ch-Submodules-2",
+  "level": "2",
+  "url": "ch-Submodules.html#ch-Submodules-2",
+  "type": "Objectives",
+  "number": "21",
+  "title": "The learning outcomes for this chapter are to...",
+  "body": " The learning outcomes for this chapter are to...  ...understand the definition of a submodule.  ...be able to give several examples of submodules.   "
+},
+{
+  "id": "defn-Submodule",
+  "level": "2",
+  "url": "ch-Submodules.html#defn-Submodule",
+  "type": "Definition",
+  "number": "21.0.1",
+  "title": "",
+  "body": "  Let be a ring and a left -module. A set is a left -submodule of if:   (S)  The set is a subgroup of .    (Cl)  If and , then .    (M)  The set together with the operation is a left -module. That is, the “associative” and “distributive” and possibly “identity” type properties hold.      "
+},
+{
+  "id": "ch-Submodules-5",
+  "level": "2",
+  "url": "ch-Submodules.html#ch-Submodules-5",
+  "type": "Remark",
+  "number": "21.0.2",
+  "title": "",
+  "body": " It should be noted that this definition looks different than our previous definitions of sub-objects. I tried hard to find a non-awkward way to keep the definition seeming more similar and failed. I’ve done my best to make this feel similar though. Perhaps the first part of the exercises should be asking you to try your hand at a more similar definition.  "
+},
+{
+  "id": "ch-Submodules-6",
+  "level": "2",
+  "url": "ch-Submodules.html#ch-Submodules-6",
+  "type": "Remark",
+  "number": "21.0.3",
+  "title": "",
+  "body": " It should also be noted here that the third item is trivial given the first two. Is that obvious?  "
+},
+{
+  "id": "ch-Submodules-7",
+  "level": "2",
+  "url": "ch-Submodules.html#ch-Submodules-7",
+  "type": "Example",
+  "number": "21.0.4",
+  "title": "",
+  "body": "  Let be a ring and a left -module. Then both and are left -submodules of . Indeed, both are subgroups of the group . Also, for and , we have and by definition of a module we also have for every and .   "
+},
+{
+  "id": "ch-Submodules-8",
+  "level": "2",
+  "url": "ch-Submodules.html#ch-Submodules-8",
+  "type": "Example",
+  "number": "21.0.5",
+  "title": "",
+  "body": "  Let be a ring and consider as a left -module. Every left ideal of is a left -submodule. Indeed, if is a left ideal, then is a subgroup of under the addition operation. Also, if and , we have that , and so the closure condition holds as well.   "
+},
+{
+  "id": "ch-Submodules-9",
+  "level": "2",
+  "url": "ch-Submodules.html#ch-Submodules-9",
+  "type": "Example",
+  "number": "21.0.6",
+  "title": "",
+  "body": "  Let be a commutative ring, and ideals of with . Recall that is an -module. We can show that is a submodule of using the left submodule test. Indeed, note from the Third Isomorphism Theorem for Rings that is an ideal of .    "
+},
+{
+  "id": "ch-Submodules-10",
+  "level": "2",
+  "url": "ch-Submodules.html#ch-Submodules-10",
+  "type": "Theorem",
+  "number": "21.0.7",
+  "title": "The Left Submodule Test.",
+  "body": " The Left Submodule Test   Let be a ring and a left -module. A nonempty subset of is a submodule of if and only if for all and .     Actually, I’m positive you can do this on your own!   "
+},
+{
+  "id": "exercises-Submodules-1",
+  "level": "2",
+  "url": "exercises-Submodules.html#exercises-Submodules-1",
+  "type": "Exercise",
+  "number": "21.20.A",
+  "title": "",
+  "body": "  Complete the missing parts above. They’re listed below to help you out!    Using the models of the definitions of subring, subgroup, submonoid, and subsemigroup, write a better definition of a submodule.    Explain (as briefly as possible) why the condition (M) in the given definition of a submodule is trivial.    Prove the left submodule test.     "
+},
+{
+  "id": "exercises-Submodules-2",
+  "level": "2",
+  "url": "exercises-Submodules.html#exercises-Submodules-2",
+  "type": "Exercise",
+  "number": "21.20.B",
+  "title": "",
+  "body": " Actually, let’s skip this one this time. In exchange, I’m going to ask you to do two of the remaining “cool” problems.  "
+},
+{
+  "id": "exercises-Submodules-3",
+  "level": "2",
+  "url": "exercises-Submodules.html#exercises-Submodules-3",
+  "type": "Exercise",
+  "number": "21.20.C",
+  "title": "",
+  "body": " Let be a ring with identity, a left ideal of , and a left -module. Prove that the set is a left -submodule of .   "
+},
+{
+  "id": "exercises-Submodules-4",
+  "level": "2",
+  "url": "exercises-Submodules.html#exercises-Submodules-4",
+  "type": "Exercise",
+  "number": "21.20.D",
+  "title": "",
+  "body": "  Let be a ring with identity and a left -module of . An element is said to be a torsion element if for some . The set of torsion elements is Recall that an integral domain is a commutative ring with identity and no zerodivisors. Prove that if is an integral domain then is a submodule of and give an example of a ring and an left -module such that is not a left -submodule of .   "
+},
+{
+  "id": "exercises-Submodules-5",
+  "level": "2",
+  "url": "exercises-Submodules.html#exercises-Submodules-5",
+  "type": "Exercise",
+  "number": "21.20.E",
+  "title": "",
+  "body": "  Let be a commutative ring with identity, an -module and ideals of . The colon submodule is a submodule of defined by: Prove that this is indeed a submodule of . Also, note that if , then is an -submodule of , i.e. an ideal, and compute the colon ideal in the ring for a field.  "
+},
+{
+  "id": "exercises-Submodules-6",
+  "level": "2",
+  "url": "exercises-Submodules.html#exercises-Submodules-6",
+  "type": "Exercise",
+  "number": "21.20.F",
+  "title": "",
+  "body": " Let be a ring with identity and a left -module. Suppose that for each , is a left -submodule of , and that . Prove that is a left -submodule of .  "
+},
+{
+  "id": "exercises-Submodules-7",
+  "level": "2",
+  "url": "exercises-Submodules.html#exercises-Submodules-7",
+  "type": "Exercise",
+  "number": "21.20.G",
+  "title": "",
+  "body": " Let be a ring with identity and a left -module. Suppose that and are left -submodules. Prove that is a left -submodule of .  "
+},
+{
+  "id": "exercises-Submodules-8",
+  "level": "2",
+  "url": "exercises-Submodules.html#exercises-Submodules-8",
+  "type": "Exercise",
+  "number": "21.20.H",
+  "title": "",
+  "body": " Note that there were some restrictions in the two previous problems.   For the union of an infinite collection of submodules to be a submodule, we required that those submodules were nested. Either find an example of a ring, a module, and a collection of submodules where the union is not a submodule - note that your collection could be finite or infinite, but it will have to be unnested - or prove that any union of -submodules of is also a submodule.  For the intersection of a collection of submodules to be a submodule, we required that the collection be finite and nonempty. Either find an example showing that condition is necessary, or show that that the intersection of any collection of -submodules of is a submodule.    "
 },
 {
   "id": "ch-ModuleIsomorphismTheorems",
