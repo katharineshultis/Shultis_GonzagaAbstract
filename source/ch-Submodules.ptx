@@ -1,9 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter xml:id="ch-Submodules" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Submodules</title><!--Chapter 21-->
+  <title>Submodules</title><!--Chapter 20-->
 
+ <objectives>
+    <title>The learning outcomes for this chapter are to...</title>
+    <ul><li><p>...understand the definition of a submodule.</p></li>
+      <li><p>...be able to give several examples of submodules.</p></li>
+    </ul>
+  </objectives>
+
+<p>As you might expect at this point, one potential definition of a submodule is that it is a SUB-MODULE! That is, a submodule is a subset of a module that is itself a module. Here’s a more formal definition of a left submodule:</p>
+
+<definition xml:id="defn-Submodule">
+  <statement>
+    <p>
+      Let <m>(R,+_{R},\cdot)</m> be a ring and <m>(M,+_{M})</m> a left <m>R</m>-module. A set <m>N</m> is a <alert>left <m>R</m>-submodule</alert> of <m>M</m> if: 
+      <dl>
+      <li>
+        <title>(S)</title>
+        <p>
+          The set <m>N</m> is a subgroup of <m>M</m>.
+        </p>
+      </li>
+      <li>
+        <title>(Cl)</title>
+        <p>
+          If <m>n\in N</m> and <m>r\in R</m>, then <m>rn\in N</m>.
+        </p>
+      </li>
+      <li>
+        <title>(M)</title>
+        <p>
+          The set <m>N</m> together with the operation <m>+_{M}</m> is a left <m>R</m>-module. That is, the “associative” and “distributive” and possibly “identity” type properties hold.
+        </p>
+      </li>
+      </dl>
+    </p>
+  </statement>
+</definition>
+
+<remark>
   <p>
-     This is coming soon(ish)!
+    It should be noted that this definition looks different than our previous definitions of sub-objects. I tried hard to find a non-awkward way to keep the definition seeming more similar and failed. I’ve done my best to make this feel similar though. Perhaps the first part of the exercises should be asking you to try your hand at a more similar definition.
+  </p>
+</remark>
+
+<remark>
+  <p>
+    It should also be noted here that the third item is trivial given the first two. Is that obvious?
+  </p>
+</remark>
+
+<example>
+  <statement>
+    <p>
+      Let <m>R</m> be a ring and <m>M</m> a left <m>R</m>-module. Then both <m>M</m> and <m>\{0\}</m> are left <m>R</m>-submodules of <m>M</m>. Indeed, both are subgroups of the group <m>M</m>. Also, for <m>r\in R</m> and <m>0\in\{0\}</m>, we have <m>r0=0\in\{0\}</m> and by definition of a module we also have <m>rm\in M</m> for every <m>r\in R</m> and <m>m\in M</m>.
+    </p>
+  </statement>
+</example>
+
+<example>
+  <statement>
+    <p>
+      Let <m>R</m> be a ring and consider <m>R</m> as a left <m>R</m>-module. Every left ideal of <m>R</m> is a left <m>R</m>-submodule. Indeed, if <m>I</m> is a left ideal, then <m>I</m> is a subgroup of <m>R</m> under the addition operation. Also, if <m>r\in R</m> and <m>a\in I</m>, we have that <m>ra\in I</m>, and so the closure condition holds as well.
+    </p>
+  </statement>
+</example>
+
+<example>
+  <statement>
+    <p>
+      Let <m>R</m> be a commutative ring, and <m>I,J</m> ideals of <m>R</m> with <m>I\subseteq J</m>. Recall that <m>R/I</m> is an <m>R</m>-module. We can show that <m>J/I</m> is a submodule of <m>R/I</m> using the left submodule test. Indeed, note from the Third Isomorphism Theorem for Rings that <m>J/I</m> is an ideal of <m>R/I</m>.<!--This needs a better reference once the early chapters are published-->
+    </p>
+  </statement>
+</example>
+
+<theorem>
+  <title>The Left Submodule Test</title>
+  <statement>
+    <p>
+      Let <m>R</m> be a ring and <m>M</m> a left <m>R</m>-module. A nonempty subset <m>N</m> of <m>M</m> is a submodule of <m>M</m> if and only if <m>x+ry\in N</m> for all <m>r\in R</m> and <m>x,y\in N</m>.<!--This isn't quite right yet...the name bit is wrong and I'll need to fix that when I transfer to Github!-->
+    </p>
+  </statement>
+  <proof>
+    <p>
+      Actually, I’m positive you can do this on your own!
+    </p>
+  </proof>
+</theorem>
+
+<exercises xml:id="exercises-Submodules">
+  <exercise number="20.A">
+    <statement>
+      <p>Complete the missing parts above. 
+        They’re listed below to help you out!
       </p>
+      <ol marker="(i)">
+        <li>
+          <p>
+            Using the models of the definitions of subring, subgroup, submonoid, and subsemigroup, write a better definition of a submodule.
+          </p>
+        </li>
+        <li>
+          <p>
+            Explain (as briefly as possible) why the condition (M) in the given definition of a submodule is trivial.
+          </p>
+        </li>
+        <li>
+          <p>
+            Prove the left submodule test.
+          </p>
+        </li>
+      </ol>
+    </statement>
+    </exercise>
+  <exercise number="20.B">
+    <p>Actually, let’s skip this one this time. In exchange, I’m going to ask you to do two of the remaining “cool” problems.</p>
+  </exercise>
+  <exercise number="20.C">
+    <statement><p>Let <m>R</m> be a ring with identity, <m>I</m> a left ideal of <m>R</m>, and <m>M</m> a left <m>R</m>-module.
+    Prove that the set
+    <md>
+      IM=\left\{\left.\sum_{i=1}^{\ell} a_{i}m_{i}\right| a_{i}\in I,m_{i}\in M,\ell\in\mathbb{N}\right\}
+    </md>
+    is a left <m>R</m>-submodule of <m>M</m>.</p>
+    </statement> 
+  </exercise>
+  <exercise number="20.D">
+    <statement>
+      <p>
+         Let <m>R</m> be a ring with identity and <m>M</m> a left <m>R</m>-module of <m>M</m>. An element <m>m\in M</m> is said to be a <alert>torsion element</alert> if <m>rm=0</m> for some <m>r\in R\setminus\{0\}</m>.
+         The set of torsion elements is
+          <md>
+            \operatorname{tor}(M)=\{m\in M\mid rm=0\text{ for some }r\in R\setminus\{0\}\}.
+          </md>
+        Recall that an integral domain is a commutative ring with identity and no zerodivisors.
+        Prove that if <m>R</m> is an integral domain then <m>\operatorname{tor}(M)</m> is a submodule of <m>M</m> 
+        and give an example of a ring <m>R</m> and an left <m>R</m>-module <m>M</m> such that <m>\operatorname{tor}(M)</m> is not a left <m>R</m>-submodule of <m>M</m>.
+      </p>
+    </statement>
+  </exercise>
+  <exercise number="20.E">
+    <statement>
+    <p>Let <m>R</m> be a commutative ring with identity, <m>M</m> an <m>R</m>-module and <m>I,J</m> ideals of <m>R</m>.
+    The colon submodule is a submodule of <m>M</m> defined by:
+      <md>
+        J:_{M}I=\{m\in M\mid am\in J\text{ for all }a\in I\}.
+      </md>
+    Prove that this is indeed a submodule of <m>M</m>. 
+    Also, note that if <m>M=R</m>, then <m>J:_{R}I</m> is an <m>R</m>-submodule of <m>R</m>, i.e. an ideal, and compute the colon ideal <m>(y^{2}):(y)</m> in the ring <m>k[x,y]/(x^{2},xy)</m> for <m>k</m> a field.  
+    </p></statement>
+  </exercise>
+  <exercise number="20.F">
+    <statement><p>
+      Let <m>R</m> be a ring with identity and <m>M</m> a left <m>R</m>-module. 
+      Suppose that for each <m>i\in\mathbb{N}</m>, <m>N_{i}</m> is a left <m>R</m>-submodule of <m>M</m>, and that <m>N_{1}\subseteq N_{2}\subseteq N_{3}\subseteq\cdots</m>. 
+      Prove that <m>N=\displaystyle\bigcup_{i=1}^{\infty} N_{i}</m> is a left <m>R</m>-submodule of <m>M</m>.
+    </p></statement>
+  </exercise>
+  <exercise number="20.G">
+    <statement><p>
+      Let <m>R</m> be a ring with identity and <m>M</m> a left <m>R</m>-module. 
+      Suppose that <m>n\in\mathbb{N}</m> and <m>N_{1},N_{2},\ldots, N_{n}</m> are left <m>R</m>-submodules. 
+      Prove that <m>N=\displaystyle\bigcap_{i=1}^{n} N_{i}</m> is a left <m>R</m>-submodule of <m>M</m>.
+    </p></statement>
+  </exercise>
+  <exercise number="20.H">
+    <statement><p>
+      Note that there were some restrictions in the two previous problems.</p>
+      <ol marker="(i)">
+        <li>For the union of an infinite collection of submodules to be a submodule, we required that those submodules were nested. 
+        Either find an example of a ring, a module, and a collection of submodules where the union is not a submodule - note that your collection could be finite or infinite, but it will have to be unnested - or prove that any union of <m>R</m>-submodules of <m>M</m> is also a submodule.
+        </li>
+        <li>For the intersection of a collection of submodules to be a submodule, we required that the collection be finite and nonempty. 
+        Either find an example showing that condition is necessary, or show that that the intersection of any collection of <m>R</m>-submodules of <m>M</m> is a submodule.
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+</exercises>
 </chapter>
