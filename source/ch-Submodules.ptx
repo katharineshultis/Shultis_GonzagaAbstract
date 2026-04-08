@@ -91,7 +91,7 @@
 </theorem>
 
 <exercises xml:id="exercises-Submodules">
-  <exercise number="20.A">
+  <exercise number="21.A">
     <statement>
       <p>Complete the missing parts above. 
         They’re listed below to help you out!
@@ -115,10 +115,10 @@
       </ol>
     </statement>
     </exercise>
-  <exercise number="20.B">
+  <exercise number="21.B">
     <p>Actually, let’s skip this one this time. In exchange, I’m going to ask you to do two of the remaining “cool” problems.</p>
   </exercise>
-  <exercise number="20.C">
+  <exercise number="21.C">
     <statement><p>Let <m>R</m> be a ring with identity, <m>I</m> a left ideal of <m>R</m>, and <m>M</m> a left <m>R</m>-module.
     Prove that the set
     <md>
@@ -127,7 +127,7 @@
     is a left <m>R</m>-submodule of <m>M</m>.</p>
     </statement> 
   </exercise>
-  <exercise number="20.D">
+  <exercise number="21.D">
     <statement>
       <p>
          Let <m>R</m> be a ring with identity and <m>M</m> a left <m>R</m>-module of <m>M</m>. An element <m>m\in M</m> is said to be a <alert>torsion element</alert> if <m>rm=0</m> for some <m>r\in R\setminus\{0\}</m>.
@@ -141,7 +141,7 @@
       </p>
     </statement>
   </exercise>
-  <exercise number="20.E">
+  <exercise number="21.E">
     <statement>
     <p>Let <m>R</m> be a commutative ring with identity, <m>M</m> an <m>R</m>-module and <m>I,J</m> ideals of <m>R</m>.
     The colon submodule is a submodule of <m>M</m> defined by:
@@ -152,21 +152,21 @@
     Also, note that if <m>M=R</m>, then <m>J:_{R}I</m> is an <m>R</m>-submodule of <m>R</m>, i.e. an ideal, and compute the colon ideal <m>(y^{2}):(y)</m> in the ring <m>k[x,y]/(x^{2},xy)</m> for <m>k</m> a field.  
     </p></statement>
   </exercise>
-  <exercise number="20.F">
+  <exercise number="21.F">
     <statement><p>
       Let <m>R</m> be a ring with identity and <m>M</m> a left <m>R</m>-module. 
       Suppose that for each <m>i\in\mathbb{N}</m>, <m>N_{i}</m> is a left <m>R</m>-submodule of <m>M</m>, and that <m>N_{1}\subseteq N_{2}\subseteq N_{3}\subseteq\cdots</m>. 
       Prove that <m>N=\displaystyle\bigcup_{i=1}^{\infty} N_{i}</m> is a left <m>R</m>-submodule of <m>M</m>.
     </p></statement>
   </exercise>
-  <exercise number="20.G">
+  <exercise number="21.G">
     <statement><p>
       Let <m>R</m> be a ring with identity and <m>M</m> a left <m>R</m>-module. 
       Suppose that <m>n\in\mathbb{N}</m> and <m>N_{1},N_{2},\ldots, N_{n}</m> are left <m>R</m>-submodules. 
       Prove that <m>N=\displaystyle\bigcap_{i=1}^{n} N_{i}</m> is a left <m>R</m>-submodule of <m>M</m>.
     </p></statement>
   </exercise>
-  <exercise number="20.H">
+  <exercise number="21.H">
     <statement><p>
       Note that there were some restrictions in the two previous problems.</p>
       <ol marker="(i)">

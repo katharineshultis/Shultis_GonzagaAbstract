@@ -188,12 +188,12 @@
       <ol marker="(i)">
         <li>
           <p>
-            Show that <m>0m=0</m> and <m>(-1)m=-m</m> for all <m>m\in M</m>.
+            Show that <m>0_Rm=0_M</m> and <m>(-1)m=-m</m> for all <m>m\in M</m>, where <m>-m</m> denotes the inverse of <m>m</m> in <m>M</m>.
           </p>
         </li>
         <li>
           <p>
-            Assume that <m>rm=0</m> for some <m>r\in R</m> and <m>m\in M\setminus\{0\}</m>.
+            Assume that <m>rm=0_M</m> for some <m>r\in R</m> and <m>m\in M\setminus\{0\}</m>.
             Prove that <m>r</m> does not have a left inverse, i.e.
             there is no element <m>s\in R</m> such that <m>sr=1</m>.
           </p>
