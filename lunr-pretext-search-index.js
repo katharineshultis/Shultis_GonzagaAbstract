@@ -1204,7 +1204,7 @@ var ptx_lunr_docs = [
   "type": "Chapter",
   "number": "20",
   "title": "What is a Module?",
-  "body": " What is a Module?   The learning outcomes for this chapter are to...  ...understand the definition of a module.  ...be able to give several examples of modules.    The way I think of a module is that it’s exactly like a vector space, except over a ring instead of a field. However, if you’re not confident you’ve got the axioms of a vector space right, this poses an issue. Informally, the key to vector spaces is that we can add vectors together, and we can scale them by our constants, which come from a field (frequently in your past courses as early introductions typically happen in Calculus and Linear Algebra courses). Also, things work “nicely” or “as expected.” Here’s a more formal definition of a module. If you’d like a formal definition of a vector space, replace the ring below with a field.    Let be a ring and an abelian group. We say is a left -module (or just a left module if the ring in question is clear) if there is a function typically denoted as for all and such that the following properties hold:  (A) A sort of “associative property” holds. For all and , we have .  (D) Two sort of “distributive properties” hold. For all and , we have and If has an identity, denoted , then we also require that the identity satisfies for all .     We could also define a right -module with a function by insisting instead that , , and . Note that an abelian group could simultaneously be a left -module and a right -module. As long as these two module structures are compatible, we call this an  - -bimodule . I currently have zero intention to discuss bimodules further than this awkward remark.    If is a commutative ring, then every left -module is automatically a right module as well via , and so we drop the left\/right distinction and simply refer to -modules when is commutative.     Any ring, , is both a left and right -module. Why?      Consider the (commutative) ring and abelian group (under addition) . We have that is an -module. Indeed, for any and , we know that is a real number and is a polynomial in with real coefficients. The module action is given by the multiplication where we think of as a linear polynomial. What else needs to be shown?      Let be a ring and a left ideal of . Then is a left -module. Is this clear?      Let be an abelian group. Then is a -module. Is this clear?      Let be a commutative ring and an ideal of . Then is an -module. Indeed, we can define the function via Should we check this is well-defined, or is that clear? With this function in place, we can show the required properties:   (A)  For and , we have     (D)  For and , we have and           Complete the missing parts above. They’re listed below to help you out!    Explain why, for any ring , is both a left and right -module.    Fill in the missing details to show that is an -module. Note that as is a field, this should mean that is a -vector space! What’s the vector space dimension?    Show that for any left ideal of any ring , is a left -module.    Show that every abelian group is a -module.        Here are some basic properties of modules. For each, let be a ring with identity, and a left -module.    Show that and for all .    Assume that for some and . Prove that does not have a left inverse, i.e. there is no element such that .       I want to separate out submodules as a separate chapter, and then hopefully do module homomorphisms, so let’s skip this part here!    "
+  "body": " What is a Module?   The learning outcomes for this chapter are to...  ...understand the definition of a module.  ...be able to give several examples of modules.    The way I think of a module is that it’s exactly like a vector space, except over a ring instead of a field. However, if you’re not confident you’ve got the axioms of a vector space right, this poses an issue. Informally, the key to vector spaces is that we can add vectors together, and we can scale them by our constants, which come from a field (frequently in your past courses as early introductions typically happen in Calculus and Linear Algebra courses). Also, things work “nicely” or “as expected.” Here’s a more formal definition of a module. If you’d like a formal definition of a vector space, replace the ring below with a field.    Let be a ring and an abelian group. We say is a left -module (or just a left module if the ring in question is clear) if there is a function typically denoted as for all and such that the following properties hold:  (A) A sort of “associative property” holds. For all and , we have .  (D) Two sort of “distributive properties” hold. For all and , we have and If has an identity, denoted , then we also require that the identity satisfies for all .     We could also define a right -module with a function by insisting instead that , , and . Note that an abelian group could simultaneously be a left -module and a right -module. As long as these two module structures are compatible, we call this an  - -bimodule . I currently have zero intention to discuss bimodules further than this awkward remark.    If is a commutative ring, then every left -module is automatically a right module as well via , and so we drop the left\/right distinction and simply refer to -modules when is commutative.     Any ring, , is both a left and right -module. Why?      Consider the (commutative) ring and abelian group (under addition) . We have that is an -module. Indeed, for any and , we know that is a real number and is a polynomial in with real coefficients. The module action is given by the multiplication where we think of as a linear polynomial. What else needs to be shown?      Let be a ring and a left ideal of . Then is a left -module. Is this clear?      Let be an abelian group. Then is a -module. Is this clear?      Let be a commutative ring and an ideal of . Then is an -module. Indeed, we can define the function via Should we check this is well-defined, or is that clear? With this function in place, we can show the required properties:   (A)  For and , we have     (D)  For and , we have and           Complete the missing parts above. They’re listed below to help you out!    Explain why, for any ring , is both a left and right -module.    Fill in the missing details to show that is an -module. Note that as is a field, this should mean that is a -vector space! What’s the vector space dimension?    Show that for any left ideal of any ring , is a left -module.    Show that every abelian group is a -module.        Here are some basic properties of modules. For each, let be a ring with identity, and a left -module.    Show that and for all , where denotes the inverse of in .    Assume that for some and . Prove that does not have a left inverse, i.e. there is no element such that .       I want to separate out submodules as a separate chapter, and then hopefully do module homomorphisms, so let’s skip this part here!    "
 },
 {
   "id": "ch-Modules-2",
@@ -1303,7 +1303,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "20.20.B",
   "title": "",
-  "body": "  Here are some basic properties of modules. For each, let be a ring with identity, and a left -module.    Show that and for all .    Assume that for some and . Prove that does not have a left inverse, i.e. there is no element such that .     "
+  "body": "  Here are some basic properties of modules. For each, let be a ring with identity, and a left -module.    Show that and for all , where denotes the inverse of in .    Assume that for some and . Prove that does not have a left inverse, i.e. there is no element such that .     "
 },
 {
   "id": "exercises-Modules-3",
@@ -1400,7 +1400,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-Submodules.html#exercises-Submodules-1",
   "type": "Exercise",
-  "number": "21.20.A",
+  "number": "21.21.A",
   "title": "",
   "body": "  Complete the missing parts above. They’re listed below to help you out!    Using the models of the definitions of subring, subgroup, submonoid, and subsemigroup, write a better definition of a submodule.    Explain (as briefly as possible) why the condition (M) in the given definition of a submodule is trivial.    Prove the left submodule test.     "
 },
@@ -1409,7 +1409,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-Submodules.html#exercises-Submodules-2",
   "type": "Exercise",
-  "number": "21.20.B",
+  "number": "21.21.B",
   "title": "",
   "body": " Actually, let’s skip this one this time. In exchange, I’m going to ask you to do two of the remaining “cool” problems.  "
 },
@@ -1418,7 +1418,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-Submodules.html#exercises-Submodules-3",
   "type": "Exercise",
-  "number": "21.20.C",
+  "number": "21.21.C",
   "title": "",
   "body": " Let be a ring with identity, a left ideal of , and a left -module. Prove that the set is a left -submodule of .   "
 },
@@ -1427,7 +1427,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-Submodules.html#exercises-Submodules-4",
   "type": "Exercise",
-  "number": "21.20.D",
+  "number": "21.21.D",
   "title": "",
   "body": "  Let be a ring with identity and a left -module of . An element is said to be a torsion element if for some . The set of torsion elements is Recall that an integral domain is a commutative ring with identity and no zerodivisors. Prove that if is an integral domain then is a submodule of and give an example of a ring and an left -module such that is not a left -submodule of .   "
 },
@@ -1436,7 +1436,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-Submodules.html#exercises-Submodules-5",
   "type": "Exercise",
-  "number": "21.20.E",
+  "number": "21.21.E",
   "title": "",
   "body": "  Let be a commutative ring with identity, an -module and ideals of . The colon submodule is a submodule of defined by: Prove that this is indeed a submodule of . Also, note that if , then is an -submodule of , i.e. an ideal, and compute the colon ideal in the ring for a field.  "
 },
@@ -1445,7 +1445,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-Submodules.html#exercises-Submodules-6",
   "type": "Exercise",
-  "number": "21.20.F",
+  "number": "21.21.F",
   "title": "",
   "body": " Let be a ring with identity and a left -module. Suppose that for each , is a left -submodule of , and that . Prove that is a left -submodule of .  "
 },
@@ -1454,7 +1454,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-Submodules.html#exercises-Submodules-7",
   "type": "Exercise",
-  "number": "21.20.G",
+  "number": "21.21.G",
   "title": "",
   "body": " Let be a ring with identity and a left -module. Suppose that and are left -submodules. Prove that is a left -submodule of .  "
 },
@@ -1463,7 +1463,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-Submodules.html#exercises-Submodules-8",
   "type": "Exercise",
-  "number": "21.20.H",
+  "number": "21.21.H",
   "title": "",
   "body": " Note that there were some restrictions in the two previous problems.   For the union of an infinite collection of submodules to be a submodule, we required that those submodules were nested. Either find an example of a ring, a module, and a collection of submodules where the union is not a submodule - note that your collection could be finite or infinite, but it will have to be unnested - or prove that any union of -submodules of is also a submodule.  For the intersection of a collection of submodules to be a submodule, we required that the collection be finite and nonempty. Either find an example showing that condition is necessary, or show that that the intersection of any collection of -submodules of is a submodule.    "
 },
