@@ -1,9 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<chapter xml:id="ch-ModuleIsomorphismTheorems" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Module Homomorphisms and Quotients</title><!--Chapter 22-->
+<chapter xml:id="ch-QuotientModulesandModuleHomomorphisms" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Module Modules and Module Homomorphisms</title><!--Chapter 22-->
 
+<objectives>
+  <title>The learning outcomes for this chapter are to...</title>
+  <ul><li><p>...understand the definition of a module homomorphism.</p></li>
+    <li><p>...understand the definition of a quotient module.</p></li>
+    <li><p>...be able to give several examples of module homomorphisms and quotient modules.</p></li>
+  </ul>
+</objectives>
+
+<p>Let's start by pointing out that quotient modules are <q>easy</q> (relatively speaking). Let <m>R</m> be a ring, <m>M</m> a left <m>R</m>-module, and <m>N</m> a left <m>R</m>-submodule of <m>M</m>. Momentarily ignoring the module structure, since <m>M</m> is an abelian group, it is necessarily the case that <m>N</m> is a normal subgroup of <m>M</m>, so <m>M/N</m> is a group as well. Now, we only need to know how to consider <m>M/N</m> as an <m>R</m>-module! The <q>obvious</q> choice is to define <m>r(m+N)=(rm)+N</m> for any <m>r\in R</m> and <m>m+N\in M/N</m>. It turns out that this works nicely for us. Indeed, we can (and maybe you should) check that the module properties check out.</p>
+<p>It's worth noting that the function <m>\mu:R\times M\to M</m> is often called the <alert>module action</alert>. It's possible we've already used this terminology some, and this paragraph should be moved into chapter 20 or 21.</p>
+
+<example>
+  <statement>
+    <p>
+      We know that <m>\Z</m> is a ring and can show that <m>\Z[x,y]</m> is a <m>\Z</m>-module. Note that the elements of <m>\Z[x,y]/(x^{2},xy)</m> look like
+      <md>
+        a_{0} + bx + a_{1}y+a_{2}y^{2}+\cdots+a_{k}y^{k} + (x^{2},xy)
+      </md>
+      for any <m>b,a_{i}\in \Z</m> and <m>k\in\N</m>. We can consider this quotient group as a <m>\Z</m>-module under the action:
+      <md>
+        <mrow>n(a_{0} + bx + a_{1}y+a_{2}y^{2}+\cdots+a_{k}y^{k} + (x^{2},xy))</mrow>
+        <mrow>=na_{0} + nbx + na_{1}y+na_{2}y^{2}+\cdots+na_{k}y^{k} + (x^{2},xy)</mrow>
+      </md>
+      and under this action, we have that <m>\Z[x,y]/(x^{2},xy)</m> is a <m>\Z</m>-module.
+    </p>
+  </statement>
+</example>
+
+<p>That's about all I want to say on quotient modules for now, so let's move on to the definition of a module homomorphism:</p>
+
+<definition>
+  <statement>
+    <p>
+      Let <m>R</m> be a ring and <m>M,N</m> left <m>R</m>-modules (with the operation written as addition). A function <m>\varphi:M\to N</m> is a <alert>left <m>R</m>-module homomorphism</alert> (or with fewer adjectives on the noun <q>homomorphism</q> when it's clear what type of homomorphism we're discussing) if for every <m>m,m'\in M</m> and <m>r\in R</m>,
+      <md>
+        \varphi(m+m')=\varphi(m)+\varphi(m')
+      </md>
+      and
+      <md>
+        \varphi(rm)=r\varphi(m).
+      </md>
+    </p>
+  </statement>
+</definition>
+
+<remark>
   <p>
-     This is coming soon(ish)!
-      </p>
+    Notice that this looks very similar to the notion of a <q>linear</q> function in linear algebra. That should come as no surprise as modules are really just vector spaces over a general ring (instead of over a field)!
+  </p>
+</remark>
+
+<example>
+  <statement>
+    <p>
+      Let <m>R</m> be a ring and <m>I</m> an ideal of <m>R</m>. Then recall that <m>R</m> and <m>R/I</m> are both left <m>R</m>-modules and note that the function <m>p:R\to R/I</m> given by <m>r\mapsto r+I</m> is a surjective <m>R</m>-module homomorphism. What needs to be done to show this?
+    </p>
+  </statement>
+</example>
+
+<example>
+  <statement>
+    <p>
+      Let <m>R</m> be a ring and <m>I</m> an ideal of <m>R</m>. Recall that <m>I</m> and <m>R</m> are both left <m>R</m>-modules and note that the function <m>\iota:I\to R</m> given by <m>a\mapsto a</m> is an injective <m>R</m>-module homomorphism. What needs to be done to show this?
+    </p>
+  </statement>
+</example>
+
+<p>Just as in ring and group lands, we can define the kernel and image of module homomorphisms:</p>
+
+<definition>
+  <statement>
+    <p>
+      Let <m>R</m> be a ring, <m>M</m> and <m>N</m> left <m>R</m>-modules and <m>\varphi:M\to N</m> a left <m>R</m>-module homomorphism. Then, the <alert>kernel</alert> of <m>\varphi</m> is
+      <md>
+        \ker(\varphi)=\{m\in M\mid \varphi(m)=0_{N}\}
+      </md>
+      and the <alert>image</alert> of <m>\varphi</m> is
+      <md>
+        \operatorname{im}(\varphi)=\varphi(M)=\{\varphi(m)\mid m\in M\}=\{n\in N\mid n=\varphi(m)\text{ for some }m\in M\}.
+      </md>
+    </p>
+  </statement>
+</definition>
+
+<p>It should come as no surprise (I hope!) that the three Isomorphism Theorems have analogues in module land! We will not necessarily prove these; however, it should be noted that the proofs are similar to those we've already done!</p>
+
+<theorem xml:id="thm-1stmodisom">
+  <title>First Isomorphism Theorem for Modules</title>
+  <statement>
+    <p>
+      Let <m>R</m> be a ring, <m>M</m> and <m>N</m> left <m>R</m>-modules, and <m>\varphi:M\to N</m> a left <m>R</m>-module homomorphism. Then, <m>\ker(\varphi)</m> is a submodule of <m>M</m>, <m>\operatorname{im}(\varphi)</m> is a submodule of <m>N</m>, and
+      <md>
+        M/\ker(\varphi)\cong \operatorname{im}(\varphi).
+      </md>
+    </p>
+  </statement>
+</theorem>
+
+<theorem xml:id="thm-2ndmodisom">
+  <title>Second Isomorphism Theorem for Modules</title>
+  <statement>
+    <p>
+      Let <m>R</m> be a ring, <m>M</m> a left <m>R</m>-module and <m>N,K</m> submodules of <m>M</m>. Let <m>K+N</m> denote the subset <m>\{k+n\mid k\in K,n\in N\}</m> of <m>M</m>. Then <m>K+N</m> is a submodule of <m>M</m>, <m>N</m> is a submodule of <m>K+N</m>, <m>K\cap N</m> is a submodule of <m>K</m>, and
+      <md>
+        (K+N)/N\cong K/(K\cap N).
+      </md>
+    </p>
+  </statement>
+</theorem>
+
+<theorem xml:id="thm-3rdmodisom">
+  <title>Third Isomorphism Theorem for Modules</title>
+  <statement>
+    <p>
+      Let <m>R</m> be a ring, <m>M</m> a left <m>R</m>-module and <m>K\subseteq N\subseteq M</m> with <m>N,K</m> submodules of <m>M</m>. Then <m>N/K</m> is a submodule of <m>M/K</m> and
+      <md>
+        (M/K)/(N/K)\cong M/N.
+      </md>
+    </p>
+  </statement>
+</theorem>
+  
+<exercises xml:id="exercises-QuotientModsandModHoms">
+  <exercise number="22.A">
+    <statement><p>Complete the missing parts above. They're listed below to help you out!</p>
+      <ol marker="(i)">
+        <li>
+          <p>
+            Let <m>R</m> be a ring, <m>M</m> a left <m>R</m>-module and <m>N</m> a left <m>R</m>-submodule. 
+            Prove that <m>M/N</m> has a left <m>R</m>-module structure under the action <m>r(m+N)=(rm)+N</m> for any <m>r\in R</m> and <m>m+N\in M/N</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Let <m>R</m> be a ring and <m>I</m> an ideal of <m>R</m>. 
+            Prove that the function <m>p:R\to R/I</m> given by <m>r\mapsto r+I</m> is a surjective <m>R</m>-module homomorphism.
+          </p>
+        </li>
+        <li>
+          <p>
+            Let <m>R</m> be a ring and <m>I</m> an ideal of <m>R</m>. 
+            Prove that the function <m>\iota:I\to R</m> given by <m>a\mapsto a</m> is an injective <m>R</m>-module homomorphism.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+  <exercise number="22.B">
+    <statement><p>Here are some neat examples of modules of homomorphisms. Each has its own directions.</p>
+    <ol marker="(i)">
+      <li>
+        <p>
+          Let <m>R</m> be a commutative ring and <m>M,N</m> be <m>R</m>-modules. 
+          Show that the set
+          <md>
+            \operatorname{Hom}_{R}(M,N)=\{\varphi:M\to N\mid\varphi\text{ is an }R\text{-module homomorphism}\}
+          </md>
+          is an <m>R</m>-module.
+        </p>
+      </li>
+      <li>
+        <p>
+          Let <m>R</m> be a commutative ring and <m>M</m> an <m>R</m>-module.
+          Prove that the set
+          <md>
+            \operatorname{End}_{R}(M)=\{\varphi:M\to M\mid\varphi\text{ is an }R\text{-module homomorphism}\}
+          </md>
+          is a (typically non-commutative) ring with identity under regular the operations of function addition and composition. Some things to think about: what's the identity element? can you find examples where this ring is non-commutative? commutative?
+        </p>
+      </li>
+      <li>
+        <p>
+          From the previous exercise, note that the set of <m>R</m>-module homomorphisms from <m>R</m> to itself, i.e. <m>\operatorname{End}_{R}(R)</m>, forms a ring. 
+          Could we have used ring homomorphisms instead?
+          That is, is the set <m>\{\varphi:R\to R\mid\varphi\text{ is a ring homomorphism}\}</m> a ring?
+        </p>
+      </li>
+    </ol>
+    </statement>
+  </exercise>
+  <exercise number="22.C">
+    <statement><p>Prove the First Isomorphism Theorem for Modules.</p></statement>
+  </exercise>
+  <exercise number="22.D">
+    <statement><p>Prove the Second Isomorphism Theorem for Modules.</p></statement>
+  </exercise>
+  <exercise number="22.E">
+    <statement><p>Prove the Third Isomorphism Theorem for Modules.</p></statement>
+  </exercise>
+</exercises>
 </chapter>

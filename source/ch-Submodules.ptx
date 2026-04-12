@@ -77,10 +77,24 @@
 </example>
 
 <theorem>
-  <title>The Left Submodule Test</title>
+  <title>The Left Submodule Test (Version 1)</title>
   <statement>
     <p>
-      Let <m>R</m> be a ring and <m>M</m> a left <m>R</m>-module. A nonempty subset <m>N</m> of <m>M</m> is a submodule of <m>M</m> if and only if <m>x+ry\in N</m> for all <m>r\in R</m> and <m>x,y\in N</m>.<!--This isn't quite right yet...the name bit is wrong and I'll need to fix that when I transfer to Github!-->
+      Let <m>R</m> be a ring with identity and <m>M</m> a left <m>R</m>-module. A nonempty subset <m>N</m> of <m>M</m> is a submodule of <m>M</m> if and only if <m>x+ry\in N</m> for all <m>r\in R</m> and <m>x,y\in N</m>.
+    </p>
+  </statement>
+  <proof>
+    <p>
+      Actually, I’m positive you can do this on your own!
+    </p>
+  </proof>
+</theorem>
+
+<theorem>
+  <title>The Left Submodule Test (Version 2)</title>
+  <statement>
+    <p>
+      Let <m>R</m> be a ring and <m>M</m> a left <m>R</m>-module. A nonempty subset <m>N</m> of <m>M</m> is a submodule of <m>M</m> if and only if <m>rx,x-y\in N</m> for all <m>r\in R</m> and <m>x,y\in N</m>.
     </p>
   </statement>
   <proof>
@@ -109,7 +123,7 @@
         </li>
         <li>
           <p>
-            Prove the left submodule test.
+            Prove Version 2 of the left submodule test. You may also choose to prove Version 1 if you'd like.
           </p>
         </li>
       </ol>
@@ -143,12 +157,12 @@
   </exercise>
   <exercise number="21.E">
     <statement>
-    <p>Let <m>R</m> be a commutative ring with identity, <m>M</m> an <m>R</m>-module and <m>I,J</m> ideals of <m>R</m>.
-    The colon submodule is a submodule of <m>M</m> defined by:
+    <p>Let <m>R</m> be a commutative ring with identity, <m>M</m> an <m>R</m>-module and <m>N,N'\subseteq M</m> two submodules of <m>M</m>.
+    The colon submodule is a submodule is defined by:
       <md>
-        J:_{M}I=\{m\in M\mid am\in J\text{ for all }a\in I\}.
+        N:_{R}N'=\{r\in R\mid rx\in N\text{ for all }r\in R\text{ and }x\in N'\}.
       </md>
-    Prove that this is indeed a submodule of <m>M</m>. 
+    Prove that this is indeed an ideal of <m>R</m>. 
     Also, note that if <m>M=R</m>, then <m>J:_{R}I</m> is an <m>R</m>-submodule of <m>R</m>, i.e. an ideal, and compute the colon ideal <m>(y^{2}):(y)</m> in the ring <m>k[x,y]/(x^{2},xy)</m> for <m>k</m> a field.  
     </p></statement>
   </exercise>
