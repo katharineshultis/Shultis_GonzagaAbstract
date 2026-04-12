@@ -1321,7 +1321,7 @@ var ptx_lunr_docs = [
   "type": "Chapter",
   "number": "21",
   "title": "Submodules",
-  "body": " Submodules   The learning outcomes for this chapter are to...  ...understand the definition of a submodule.  ...be able to give several examples of submodules.    As you might expect at this point, one potential definition of a submodule is that it is a SUB-MODULE! That is, a submodule is a subset of a module that is itself a module. Here’s a more formal definition of a left submodule:    Let be a ring and a left -module. A set is a left -submodule of if:   (S)  The set is a subgroup of .    (Cl)  If and , then .    (M)  The set together with the operation is a left -module. That is, the “associative” and “distributive” and possibly “identity” type properties hold.        It should be noted that this definition looks different than our previous definitions of sub-objects. I tried hard to find a non-awkward way to keep the definition seeming more similar and failed. I’ve done my best to make this feel similar though. Perhaps the first part of the exercises should be asking you to try your hand at a more similar definition.    It should also be noted here that the third item is trivial given the first two. Is that obvious?     Let be a ring and a left -module. Then both and are left -submodules of . Indeed, both are subgroups of the group . Also, for and , we have and by definition of a module we also have for every and .      Let be a ring and consider as a left -module. Every left ideal of is a left -submodule. Indeed, if is a left ideal, then is a subgroup of under the addition operation. Also, if and , we have that , and so the closure condition holds as well.      Let be a commutative ring, and ideals of with . Recall that is an -module. We can show that is a submodule of using the left submodule test. Indeed, note from the Third Isomorphism Theorem for Rings that is an ideal of .      The Left Submodule Test   Let be a ring and a left -module. A nonempty subset of is a submodule of if and only if for all and .     Actually, I’m positive you can do this on your own!       Complete the missing parts above. They’re listed below to help you out!    Using the models of the definitions of subring, subgroup, submonoid, and subsemigroup, write a better definition of a submodule.    Explain (as briefly as possible) why the condition (M) in the given definition of a submodule is trivial.    Prove the left submodule test.       Actually, let’s skip this one this time. In exchange, I’m going to ask you to do two of the remaining “cool” problems.    Let be a ring with identity, a left ideal of , and a left -module. Prove that the set is a left -submodule of .      Let be a ring with identity and a left -module of . An element is said to be a torsion element if for some . The set of torsion elements is Recall that an integral domain is a commutative ring with identity and no zerodivisors. Prove that if is an integral domain then is a submodule of and give an example of a ring and an left -module such that is not a left -submodule of .      Let be a commutative ring with identity, an -module and ideals of . The colon submodule is a submodule of defined by: Prove that this is indeed a submodule of . Also, note that if , then is an -submodule of , i.e. an ideal, and compute the colon ideal in the ring for a field.    Let be a ring with identity and a left -module. Suppose that for each , is a left -submodule of , and that . Prove that is a left -submodule of .    Let be a ring with identity and a left -module. Suppose that and are left -submodules. Prove that is a left -submodule of .    Note that there were some restrictions in the two previous problems.   For the union of an infinite collection of submodules to be a submodule, we required that those submodules were nested. Either find an example of a ring, a module, and a collection of submodules where the union is not a submodule - note that your collection could be finite or infinite, but it will have to be unnested - or prove that any union of -submodules of is also a submodule.  For the intersection of a collection of submodules to be a submodule, we required that the collection be finite and nonempty. Either find an example showing that condition is necessary, or show that that the intersection of any collection of -submodules of is a submodule.      "
+  "body": " Submodules   The learning outcomes for this chapter are to...  ...understand the definition of a submodule.  ...be able to give several examples of submodules.    As you might expect at this point, one potential definition of a submodule is that it is a SUB-MODULE! That is, a submodule is a subset of a module that is itself a module. Here’s a more formal definition of a left submodule:    Let be a ring and a left -module. A set is a left -submodule of if:   (S)  The set is a subgroup of .    (Cl)  If and , then .    (M)  The set together with the operation is a left -module. That is, the “associative” and “distributive” and possibly “identity” type properties hold.        It should be noted that this definition looks different than our previous definitions of sub-objects. I tried hard to find a non-awkward way to keep the definition seeming more similar and failed. I’ve done my best to make this feel similar though. Perhaps the first part of the exercises should be asking you to try your hand at a more similar definition.    It should also be noted here that the third item is trivial given the first two. Is that obvious?     Let be a ring and a left -module. Then both and are left -submodules of . Indeed, both are subgroups of the group . Also, for and , we have and by definition of a module we also have for every and .      Let be a ring and consider as a left -module. Every left ideal of is a left -submodule. Indeed, if is a left ideal, then is a subgroup of under the addition operation. Also, if and , we have that , and so the closure condition holds as well.      Let be a commutative ring, and ideals of with . Recall that is an -module. We can show that is a submodule of using the left submodule test. Indeed, note from the Third Isomorphism Theorem for Rings that is an ideal of .      The Left Submodule Test (Version 1)   Let be a ring with identity and a left -module. A nonempty subset of is a submodule of if and only if for all and .    Actually, I’m positive you can do this on your own!     The Left Submodule Test (Version 2)   Let be a ring and a left -module. A nonempty subset of is a submodule of if and only if for all and .    Actually, I’m positive you can do this on your own!       Complete the missing parts above. They’re listed below to help you out!    Using the models of the definitions of subring, subgroup, submonoid, and subsemigroup, write a better definition of a submodule.    Explain (as briefly as possible) why the condition (M) in the given definition of a submodule is trivial.    Prove Version 2 of the left submodule test. You may also choose to prove Version 1 if you'd like.       Actually, let’s skip this one this time. In exchange, I’m going to ask you to do two of the remaining “cool” problems.    Let be a ring with identity, a left ideal of , and a left -module. Prove that the set is a left -submodule of .      Let be a ring with identity and a left -module of . An element is said to be a torsion element if for some . The set of torsion elements is Recall that an integral domain is a commutative ring with identity and no zerodivisors. Prove that if is an integral domain then is a submodule of and give an example of a ring and an left -module such that is not a left -submodule of .      Let be a commutative ring with identity, an -module and two submodules of . The colon submodule is a submodule is defined by: Prove that this is indeed an ideal of . Also, note that if , then is an -submodule of , i.e. an ideal, and compute the colon ideal in the ring for a field.    Let be a ring with identity and a left -module. Suppose that for each , is a left -submodule of , and that . Prove that is a left -submodule of .    Let be a ring with identity and a left -module. Suppose that and are left -submodules. Prove that is a left -submodule of .    Note that there were some restrictions in the two previous problems.   For the union of an infinite collection of submodules to be a submodule, we required that those submodules were nested. Either find an example of a ring, a module, and a collection of submodules where the union is not a submodule - note that your collection could be finite or infinite, but it will have to be unnested - or prove that any union of -submodules of is also a submodule.  For the intersection of a collection of submodules to be a submodule, we required that the collection be finite and nonempty. Either find an example showing that condition is necessary, or show that that the intersection of any collection of -submodules of is a submodule.      "
 },
 {
   "id": "ch-Submodules-2",
@@ -1392,8 +1392,17 @@ var ptx_lunr_docs = [
   "url": "ch-Submodules.html#ch-Submodules-10",
   "type": "Theorem",
   "number": "21.0.7",
-  "title": "The Left Submodule Test.",
-  "body": " The Left Submodule Test   Let be a ring and a left -module. A nonempty subset of is a submodule of if and only if for all and .     Actually, I’m positive you can do this on your own!   "
+  "title": "The Left Submodule Test (Version 1).",
+  "body": " The Left Submodule Test (Version 1)   Let be a ring with identity and a left -module. A nonempty subset of is a submodule of if and only if for all and .    Actually, I’m positive you can do this on your own!   "
+},
+{
+  "id": "ch-Submodules-11",
+  "level": "2",
+  "url": "ch-Submodules.html#ch-Submodules-11",
+  "type": "Theorem",
+  "number": "21.0.8",
+  "title": "The Left Submodule Test (Version 2).",
+  "body": " The Left Submodule Test (Version 2)   Let be a ring and a left -module. A nonempty subset of is a submodule of if and only if for all and .    Actually, I’m positive you can do this on your own!   "
 },
 {
   "id": "exercises-Submodules-1",
@@ -1402,7 +1411,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "21.21.A",
   "title": "",
-  "body": "  Complete the missing parts above. They’re listed below to help you out!    Using the models of the definitions of subring, subgroup, submonoid, and subsemigroup, write a better definition of a submodule.    Explain (as briefly as possible) why the condition (M) in the given definition of a submodule is trivial.    Prove the left submodule test.     "
+  "body": "  Complete the missing parts above. They’re listed below to help you out!    Using the models of the definitions of subring, subgroup, submonoid, and subsemigroup, write a better definition of a submodule.    Explain (as briefly as possible) why the condition (M) in the given definition of a submodule is trivial.    Prove Version 2 of the left submodule test. You may also choose to prove Version 1 if you'd like.     "
 },
 {
   "id": "exercises-Submodules-2",
@@ -1438,7 +1447,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "21.21.E",
   "title": "",
-  "body": "  Let be a commutative ring with identity, an -module and ideals of . The colon submodule is a submodule of defined by: Prove that this is indeed a submodule of . Also, note that if , then is an -submodule of , i.e. an ideal, and compute the colon ideal in the ring for a field.  "
+  "body": "  Let be a commutative ring with identity, an -module and two submodules of . The colon submodule is a submodule is defined by: Prove that this is indeed an ideal of . Also, note that if , then is an -submodule of , i.e. an ideal, and compute the colon ideal in the ring for a field.  "
 },
 {
   "id": "exercises-Submodules-6",
@@ -1468,13 +1477,148 @@ var ptx_lunr_docs = [
   "body": " Note that there were some restrictions in the two previous problems.   For the union of an infinite collection of submodules to be a submodule, we required that those submodules were nested. Either find an example of a ring, a module, and a collection of submodules where the union is not a submodule - note that your collection could be finite or infinite, but it will have to be unnested - or prove that any union of -submodules of is also a submodule.  For the intersection of a collection of submodules to be a submodule, we required that the collection be finite and nonempty. Either find an example showing that condition is necessary, or show that that the intersection of any collection of -submodules of is a submodule.    "
 },
 {
-  "id": "ch-ModuleIsomorphismTheorems",
+  "id": "ch-QuotientModulesandModuleHomomorphisms",
   "level": "1",
-  "url": "ch-ModuleIsomorphismTheorems.html",
+  "url": "ch-QuotientModulesandModuleHomomorphisms.html",
   "type": "Chapter",
   "number": "22",
-  "title": "Module Homomorphisms and Quotients",
-  "body": " Module Homomorphisms and Quotients  This is coming soon(ish)!  "
+  "title": "Module Modules and Module Homomorphisms",
+  "body": " Module Modules and Module Homomorphisms   The learning outcomes for this chapter are to...  ...understand the definition of a module homomorphism.  ...understand the definition of a quotient module.  ...be able to give several examples of module homomorphisms and quotient modules.    Let's start by pointing out that quotient modules are easy (relatively speaking). Let be a ring, a left -module, and a left -submodule of . Momentarily ignoring the module structure, since is an abelian group, it is necessarily the case that is a normal subgroup of , so is a group as well. Now, we only need to know how to consider as an -module! The obvious choice is to define for any and . It turns out that this works nicely for us. Indeed, we can (and maybe you should) check that the module properties check out.  It's worth noting that the function is often called the module action . It's possible we've already used this terminology some, and this paragraph should be moved into chapter 20 or 21.    We know that is a ring and can show that is a -module. Note that the elements of look like for any and . We can consider this quotient group as a -module under the action: and under this action, we have that is a -module.    That's about all I want to say on quotient modules for now, so let's move on to the definition of a module homomorphism:    Let be a ring and left -modules (with the operation written as addition). A function is a left -module homomorphism (or with fewer adjectives on the noun homomorphism when it's clear what type of homomorphism we're discussing) if for every and , and      Notice that this looks very similar to the notion of a linear function in linear algebra. That should come as no surprise as modules are really just vector spaces over a general ring (instead of over a field)!     Let be a ring and an ideal of . Then recall that and are both left -modules and note that the function given by is a surjective -module homomorphism. What needs to be done to show this?      Let be a ring and an ideal of . Recall that and are both left -modules and note that the function given by is an injective -module homomorphism. What needs to be done to show this?    Just as in ring and group lands, we can define the kernel and image of module homomorphisms:    Let be a ring, and left -modules and a left -module homomorphism. Then, the kernel of is and the image of is     It should come as no surprise (I hope!) that the three Isomorphism Theorems have analogues in module land! We will not necessarily prove these; however, it should be noted that the proofs are similar to those we've already done!   First Isomorphism Theorem for Modules   Let be a ring, and left -modules, and a left -module homomorphism. Then, is a submodule of , is a submodule of , and      Second Isomorphism Theorem for Modules   Let be a ring, a left -module and submodules of . Let denote the subset of . Then is a submodule of , is a submodule of , is a submodule of , and      Third Isomorphism Theorem for Modules   Let be a ring, a left -module and with submodules of . Then is a submodule of and       Complete the missing parts above. They're listed below to help you out!    Let be a ring, a left -module and a left -submodule. Prove that has a left -module structure under the action for any and .    Let be a ring and an ideal of . Prove that the function given by is a surjective -module homomorphism.    Let be a ring and an ideal of . Prove that the function given by is an injective -module homomorphism.       Here are some neat examples of modules of homomorphisms. Each has its own directions.    Let be a commutative ring and be -modules. Show that the set is an -module.    Let be a commutative ring and an -module. Prove that the set is a (typically non-commutative) ring with identity under regular the operations of function addition and composition. Some things to think about: what's the identity element? can you find examples where this ring is non-commutative? commutative?    From the previous exercise, note that the set of -module homomorphisms from to itself, i.e. , forms a ring. Could we have used ring homomorphisms instead? That is, is the set a ring?       Prove the First Isomorphism Theorem for Modules.    Prove the Second Isomorphism Theorem for Modules.    Prove the Third Isomorphism Theorem for Modules.    "
+},
+{
+  "id": "ch-QuotientModulesandModuleHomomorphisms-2",
+  "level": "2",
+  "url": "ch-QuotientModulesandModuleHomomorphisms.html#ch-QuotientModulesandModuleHomomorphisms-2",
+  "type": "Objectives",
+  "number": "22",
+  "title": "The learning outcomes for this chapter are to...",
+  "body": " The learning outcomes for this chapter are to...  ...understand the definition of a module homomorphism.  ...understand the definition of a quotient module.  ...be able to give several examples of module homomorphisms and quotient modules.   "
+},
+{
+  "id": "ch-QuotientModulesandModuleHomomorphisms-5",
+  "level": "2",
+  "url": "ch-QuotientModulesandModuleHomomorphisms.html#ch-QuotientModulesandModuleHomomorphisms-5",
+  "type": "Example",
+  "number": "22.0.1",
+  "title": "",
+  "body": "  We know that is a ring and can show that is a -module. Note that the elements of look like for any and . We can consider this quotient group as a -module under the action: and under this action, we have that is a -module.   "
+},
+{
+  "id": "ch-QuotientModulesandModuleHomomorphisms-7",
+  "level": "2",
+  "url": "ch-QuotientModulesandModuleHomomorphisms.html#ch-QuotientModulesandModuleHomomorphisms-7",
+  "type": "Definition",
+  "number": "22.0.2",
+  "title": "",
+  "body": "  Let be a ring and left -modules (with the operation written as addition). A function is a left -module homomorphism (or with fewer adjectives on the noun homomorphism when it's clear what type of homomorphism we're discussing) if for every and , and    "
+},
+{
+  "id": "ch-QuotientModulesandModuleHomomorphisms-8",
+  "level": "2",
+  "url": "ch-QuotientModulesandModuleHomomorphisms.html#ch-QuotientModulesandModuleHomomorphisms-8",
+  "type": "Remark",
+  "number": "22.0.3",
+  "title": "",
+  "body": " Notice that this looks very similar to the notion of a linear function in linear algebra. That should come as no surprise as modules are really just vector spaces over a general ring (instead of over a field)!  "
+},
+{
+  "id": "ch-QuotientModulesandModuleHomomorphisms-9",
+  "level": "2",
+  "url": "ch-QuotientModulesandModuleHomomorphisms.html#ch-QuotientModulesandModuleHomomorphisms-9",
+  "type": "Example",
+  "number": "22.0.4",
+  "title": "",
+  "body": "  Let be a ring and an ideal of . Then recall that and are both left -modules and note that the function given by is a surjective -module homomorphism. What needs to be done to show this?   "
+},
+{
+  "id": "ch-QuotientModulesandModuleHomomorphisms-10",
+  "level": "2",
+  "url": "ch-QuotientModulesandModuleHomomorphisms.html#ch-QuotientModulesandModuleHomomorphisms-10",
+  "type": "Example",
+  "number": "22.0.5",
+  "title": "",
+  "body": "  Let be a ring and an ideal of . Recall that and are both left -modules and note that the function given by is an injective -module homomorphism. What needs to be done to show this?   "
+},
+{
+  "id": "ch-QuotientModulesandModuleHomomorphisms-12",
+  "level": "2",
+  "url": "ch-QuotientModulesandModuleHomomorphisms.html#ch-QuotientModulesandModuleHomomorphisms-12",
+  "type": "Definition",
+  "number": "22.0.6",
+  "title": "",
+  "body": "  Let be a ring, and left -modules and a left -module homomorphism. Then, the kernel of is and the image of is    "
+},
+{
+  "id": "thm-1stmodisom",
+  "level": "2",
+  "url": "ch-QuotientModulesandModuleHomomorphisms.html#thm-1stmodisom",
+  "type": "Theorem",
+  "number": "22.0.7",
+  "title": "First Isomorphism Theorem for Modules.",
+  "body": " First Isomorphism Theorem for Modules   Let be a ring, and left -modules, and a left -module homomorphism. Then, is a submodule of , is a submodule of , and    "
+},
+{
+  "id": "thm-2ndmodisom",
+  "level": "2",
+  "url": "ch-QuotientModulesandModuleHomomorphisms.html#thm-2ndmodisom",
+  "type": "Theorem",
+  "number": "22.0.8",
+  "title": "Second Isomorphism Theorem for Modules.",
+  "body": " Second Isomorphism Theorem for Modules   Let be a ring, a left -module and submodules of . Let denote the subset of . Then is a submodule of , is a submodule of , is a submodule of , and    "
+},
+{
+  "id": "thm-3rdmodisom",
+  "level": "2",
+  "url": "ch-QuotientModulesandModuleHomomorphisms.html#thm-3rdmodisom",
+  "type": "Theorem",
+  "number": "22.0.9",
+  "title": "Third Isomorphism Theorem for Modules.",
+  "body": " Third Isomorphism Theorem for Modules   Let be a ring, a left -module and with submodules of . Then is a submodule of and    "
+},
+{
+  "id": "exercises-QuotientModsandModHoms-1",
+  "level": "2",
+  "url": "exercises-QuotientModsandModHoms.html#exercises-QuotientModsandModHoms-1",
+  "type": "Exercise",
+  "number": "22.22.A",
+  "title": "",
+  "body": " Complete the missing parts above. They're listed below to help you out!    Let be a ring, a left -module and a left -submodule. Prove that has a left -module structure under the action for any and .    Let be a ring and an ideal of . Prove that the function given by is a surjective -module homomorphism.    Let be a ring and an ideal of . Prove that the function given by is an injective -module homomorphism.     "
+},
+{
+  "id": "exercises-QuotientModsandModHoms-2",
+  "level": "2",
+  "url": "exercises-QuotientModsandModHoms.html#exercises-QuotientModsandModHoms-2",
+  "type": "Exercise",
+  "number": "22.22.B",
+  "title": "",
+  "body": " Here are some neat examples of modules of homomorphisms. Each has its own directions.    Let be a commutative ring and be -modules. Show that the set is an -module.    Let be a commutative ring and an -module. Prove that the set is a (typically non-commutative) ring with identity under regular the operations of function addition and composition. Some things to think about: what's the identity element? can you find examples where this ring is non-commutative? commutative?    From the previous exercise, note that the set of -module homomorphisms from to itself, i.e. , forms a ring. Could we have used ring homomorphisms instead? That is, is the set a ring?     "
+},
+{
+  "id": "exercises-QuotientModsandModHoms-3",
+  "level": "2",
+  "url": "exercises-QuotientModsandModHoms.html#exercises-QuotientModsandModHoms-3",
+  "type": "Exercise",
+  "number": "22.22.C",
+  "title": "",
+  "body": " Prove the First Isomorphism Theorem for Modules.  "
+},
+{
+  "id": "exercises-QuotientModsandModHoms-4",
+  "level": "2",
+  "url": "exercises-QuotientModsandModHoms.html#exercises-QuotientModsandModHoms-4",
+  "type": "Exercise",
+  "number": "22.22.D",
+  "title": "",
+  "body": " Prove the Second Isomorphism Theorem for Modules.  "
+},
+{
+  "id": "exercises-QuotientModsandModHoms-5",
+  "level": "2",
+  "url": "exercises-QuotientModsandModHoms.html#exercises-QuotientModsandModHoms-5",
+  "type": "Exercise",
+  "number": "22.22.E",
+  "title": "",
+  "body": " Prove the Third Isomorphism Theorem for Modules.  "
 },
 {
   "id": "backmatter-2",
