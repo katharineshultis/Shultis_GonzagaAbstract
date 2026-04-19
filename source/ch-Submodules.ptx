@@ -55,7 +55,7 @@
 <example>
   <statement>
     <p>
-      Let <m>R</m> be a ring and <m>M</m> a left <m>R</m>-module. Then both <m>M</m> and <m>\{0\}</m> are left <m>R</m>-submodules of <m>M</m>. Indeed, both are subgroups of the group <m>M</m>. Also, for <m>r\in R</m> and <m>0\in\{0\}</m>, we have <m>r0=0\in\{0\}</m> and by definition of a module we also have <m>rm\in M</m> for every <m>r\in R</m> and <m>m\in M</m>.
+      Let <m>R</m> be a ring and <m>M</m> a left <m>R</m>-module. Then both <m>M</m> and <m>\{0_M\}</m> are left <m>R</m>-submodules of <m>M</m>. Indeed, both are subgroups of the group <m>M</m>. Also, for <m>r\in R</m> and <m>0\in\{0\}</m>, we have <m>r0=0\in\{0\}</m> and by definition of a module we also have <m>rm\in M</m> for every <m>r\in R</m> and <m>m\in M</m>.
     </p>
   </statement>
 </example>

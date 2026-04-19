@@ -75,7 +75,7 @@
         Consider the (commutative) ring <m>R=\R</m> and abelian group (under addition) <m>M=\R[X]</m>.
         We have that <m>M</m> is an <m>R</m>-module.
         Indeed, for any <m>r\in R</m> and <m>m\in M</m>, we know that <m>r</m> is a real number and <m>m</m> is a polynomial in <m>X</m> with real coefficients.
-        The module action <m>\mu:R\times M\to M</m> is given by the multiplication <m>\mu(r,m)=rm</m> where we think of <m>r</m> as a linear polynomial.
+        The module action <m>\mu:R\times M\to M</m> is given by the multiplication <m>\mu(r,m)=rm</m> where we think of <m>r</m> as a constant polynomial.
         What else needs to be shown?
       </p>
     </statement>
@@ -189,6 +189,11 @@
         <li>
           <p>
             Show that <m>0_Rm=0_M</m> and <m>(-1)m=-m</m> for all <m>m\in M</m>, where <m>-m</m> denotes the inverse of <m>m</m> in <m>M</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Show that <m>r0_M=0_M</m> for all <m>r\in R</m> where <m>0_M</m> denotes the identity element in <m>M</m>.
           </p>
         </li>
         <li>
